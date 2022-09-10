@@ -25,7 +25,7 @@ This course is oriented towards biologists and bioinformaticians with a particul
 # Prerequisites
 
 The prerequisites for the Statistical Genomics Analysis course are the successful completion of a basic course of statistics that covers topics on data exploration and descriptive statistics, statistical modeling, and inference: linear models, confidence intervals, t-tests, F-tests, anova, chi-squared test.
-The basis concepts may be revisited in the online course at https://gtpb.github.io/PSLS20/ (English) and in https://statomics.github.io/statistiekCursusNotas/ (Dutch).
+The basis concepts may be revisited in the online course at https://statomics.github.io/PSLS/ (English) and in https://statomics.github.io/sbc21/ (Dutch).
 
 In addition, knowledge of programming in `R` is preferred. A primer to `R` and Data visualization in `R` can be found at:
 
@@ -35,7 +35,7 @@ In addition, knowledge of programming in `R` is preferred. A primer to `R` and D
 
 # Software 
 
-- Participants are required to bring their own laptop with [R](https://www.r-project.org/) version 4.1.1 or greater. 
+- Participants are required to bring their own laptop with [R](https://www.r-project.org/) version 4.2 or greater. 
 
 - We also recommend to also install the latest version of [RStudio](https://www.rstudio.com/products/rstudio/download/).
 

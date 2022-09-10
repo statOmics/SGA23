@@ -1,0 +1,770 @@
+---
+title: "Position of the Course"
+author: "Lieven Clement"
+date: "[statOmics](https://statomics.github.io)"
+output:
+    html_document:
+      code_download: true
+      toc: true
+      toc_float: true
+      highlight: tango
+      number_sections: true
+---
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
+
+</br>
+
+# What is Life?
+
+## Schrödinger en Prigogine
+
+Book: "What Is Life? The Physical Aspect of the Living Cell" (Schrödinger, 1944). 
+
+Life is 
+
+1. een open system that can generate order from chaos by exploiting external energy sources (entropy is disorder),
+
+2. with the capacity to transmit its own specific blueprint from generation to generation (reproductive invariance). 
+
+Note, that DNA was not known yet when Schrödinger wrote his seminal book. 
+
+
+</br>  
+
+### How is this possible
+
+- Second law of thermodynamics: a closed system is always gearing towards maximal entropy
+
+- Entropy is a measure for disorder 
+
+<center>![](https://www.handysquad.com/wp-content/uploads/2020/10/tie-up-cables.jpg){width=30%} $\rightarrow$ ![](https://eadn-wc05-201489.nxedge.io/cdn/wp-content/uploads/2018/09/EntropyChaos2-700-467.jpg){width=30%}
+</center>
+
+</br>
+
+- Life is 
+    
+    - based on chemical reactions
+    - an open system
+    - solar energie 
+    - chaos of molecule on earth  
+    - While chemical reactions produce structure a lot of energy is lost into heat: dissipation. 
+      
+      $\rightarrow$ Increase of entropy
+
+</br>
+
+Prigogine did research to chemical systems far from equilibrium. 
+
+- Open systems: influx of mater en energy 
+
+- Reactions consist of many feedback loops  
+
+- They can generate structure: e.g chemical clocks, spatial and spatio-temporal waves in concentration of chemicals 
+
+- They dissipate incoming energy while producing structure
+
+- He called them dissipative structures. 
+
+</br>
+
+Our solar system is a dissipative zone where order can originate from chaos. 
+
+- Life produces entropy by dissipating energy from photons (light and UV) to heat through organic pigments (e.g. chlorophyll)   
+
+- This heat induces secondary dissipative processes like the water cycle, wind and sea currents etc. 
+
+- So life also transforms its environment.
+
+</br>  
+
+## Definition according to de Duve
+
+
+Book: "Life Evolving - Molecules, Mind and Meaning" (de Duve, 2002)
+
+Life is 
+
+1. one
+2. chemistry
+3. information 
+
+</br>  
+
+Origin of leven:
+
+- first energy
+- then chemistry and
+- subsequently information
+
+</br>  
+
+### Life is one
+
+
+#### All organism consist of cells
+
+- unicellular organisms
+
+![](./figs/Prochlorococcus_marinus.jpg){width=50%}  
+(Cyanobacterium, source: Chisholm Lab, wikipedia) 
+
+</br>  
+
+- Essential: membrane that is separating them from there environment and enables interaction with the environment 
+
+</br>  
+
+- Multicellular organisms 
+
+![](https://mrssmithsbiology.files.wordpress.com/2019/10/picture4.jpg)  
+(source: mrssmithsbiology)
+
+</br>  
+
+#### LUCA (last Universal Common Ancestor).
+
+- All cells orginate from the same population of ancestral cells  
+
+![](./figs/Phylogenetic_tree.svg)
+(Source: wikipedia)    
+
+</br>  
+    
+#### Universal fuel for life (is actually chemistry)
+
+![](./figs/ATP-ADP.png)
+(Source: adapted from wikipedia)
+
+- ATP: Adinose-tri-phosphate
+- Note that AMP is one of the building blocks of RNA. 
+- Link between energy and information! 
+
+</br>  
+
+#### Same building blocks for all living organisms 
+
+1. Lipids: membranes
+2. Carbohydrates (sugars): energy + building blocks
+3. Amino acids: building blocks of proteins, which are the workhorses of a cell 
+4. Nucleic Acids: building blocks of RNA and DNA
+
+Note, that poly aromatic carbohydrates (PAHs) are omnipresent interstellar space
+
+  - Cat's paw nebula
+  - Green regions are regions where the radiation of hot stars induces fluorescence of PAHs. 
+    
+![](./figs/orionWithPAH.jpeg){width=200%} 
+</br>  
+
+- They are further transformed in interstellar space
+
+    - hydrogenation: waterstoffen, 
+    - oxidation: zuurstof, 
+    - hydroxylation (OH) 
+    - ...
+
+$\rightarrow$ first step to amino acids (building blocks of proteins) and nucleotides (building blocks of RNA and DNA) are just there, abundant in outer space.
+
+##### Lipids 
+![](./figs/Cell_membrane_detailed_diagram_4.svg)
+(Source: Doug Hatfield, wikipedia)
+
+</br>  
+
+##### Carbohydrates 
+![](https://thebiologynotes.com/wp-content/uploads/2020/11/Carbohydrates-definition-classification-with-structure-and-functions.jpeg)
+(Source: thebiologynotes.com)
+
+</br>  
+
+##### Amino Acids
+![](https://thebiologynotes.com/wp-content/uploads/2020/12/Amino-acids-and-Proteins.jpeg)
+(Source: thebiologynotes.com)
+
+</br>  
+    
+##### Nucleic Acids
+
+- Building blocks for the molecules that store the information that we inherit form our parents: RNA and DNA
+
+
+![](./figs/RNA-Nucleobases.svg){width=50%}  
+(RNA, Source: wikipedia)
+
+</br>  
+
+![](./figs/DNA_Nucleotides.jpeg)  
+(DNA, Source: OpenStax, wikipedia)
+
+</br>  
+
+![](./figs/Difference_DNA_RNA-EN.svg)  
+(Source: Sponk, wikipedia)
+
+</br>  
+    
+
+#### Same genetic code (See Life is information)
+
+</br>  
+
+### Life is Chemistry
+
+[![](./figs/roche_pathways.jpg)](http://biochemical-pathways.com/#/map/1)
+(Source: Dr. Gerhard Michal, Roche)
+<!-- 
+Not working http in https
+<div style="position:relative;padding-top:56.25%;">
+<iframe src= "http://googleweblight.com/?liteurl=https://biochemical-pathways.com/#/map/1" frameborder="0" allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;">
+</iframe>
+</div> -->
+
+#### Energy 
+
+![](./figs/ATP-ADP.png)
+(Source: wikipedia)
+
+</br>  
+
+#### Catalysis
+
+![](./figs/Citric_acid_cycle_with_aconitate_2.svg)
+(Source: Narayanese, wikipedia)
+
+</br>  
+<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+<iframe
+src="https://www.youtube.com/embed/yk14dOOvwMk?start=8&end=60"
+frameborder="0"
+style=" position:absolute;top: 0;left: 0;width: 100%;height: 100%;"
+allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></iframe>
+</div>
+</br>  
+
+"Any living organism is a reflection of its enzyme arsenal" 
+ 
+- Catalysis: a large number of chemical reactions would never happen when we only would mix molecules without a catalist. 
+
+- Catalist: chemical substance that helps a reaction to take place without being consumed itself.
+
+- Biological catalists are referred to as enzymes  
+
+- Enzymes are proteins that  
+  
+  - are fishing certain molecules from the complex mixture in a cell, 
+  - which consists of thousands of chemical compounds 
+  - generally at low concentrations;
+  - through bindingsites they can facilitate that these molecules (substrates) are getting close so that they can react and form a new compound. 
+</br>  
+
+#### Self-organisation
+
+- Some proteins also give structure to a cel 
+- The can spontaneously form structrue 
+- See video where cytoplasm ("liquid in cell") was homogenised and is subsequently organising itself in cell-like structures. 
+</br>  
+<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+<iframe
+src="https://www.youtube.com/embed/prq1Occu22s?start=0&end=7&loop=1"
+frameborder="0"
+style=" position:absolute;top: 0;left: 0;width: 100%;height: 100%;"
+allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></iframe>
+</div>
+
+(Source: Science DOI: 10.1126/science.aav7793)
+
+</br>  
+
+Researcher found that the following was required for this: 
+
+- ATP: the energy source of a cell 
+- a filamentous proteines (microtubuli) 
+- Dynein, a kind of motor protein
+
+![](./figs/Tubulin_Infographic.jpeg)  
+(Source: Pakorn Kanchanawong, wikipedia)
+
+</br>  
+
+Protein plays a central role in life: Catalysis + structure 
+
+A cell thus inherits not only genetic information but also its spatial organisation from a mother cell. 
+
+</br>  
+
+### Life is information
+
+</br>  
+<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+<iframe
+src="https://www.youtube.com/embed/ult4_6hh5zo"
+frameborder="0"
+style=" position:absolute;top: 0;left: 0;width: 100%;height: 100%;"
+allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></iframe>
+</div>
+</br> 
+
+- Gene: unit of genetic material, a DNA sequence that is encoding for the synthesis of a gene product, a protein or a functional RNA. 
+
+![](./figs/gene.svg)
+(Source: Thomas Shafee, wikipedia)
+
+</br>
+
+- DNA: 4 letter code (4 basen: ACGT)
+- RNA: 4 letter code (4 basen: ACGU)
+
+![](./figs/Difference_DNA_RNA-EN.svg){width=50%}  
+(Source: Sponk, wikipedia)
+
+</br>  
+
+![](https://aholdencirm.files.wordpress.com/2016/06/transcription_2.jpg)  
+(Source: [tokresources.org](http://www.tokresource.org/tok_classes/biobiobio/biomenu/transcription_translation/))
+
+</br>  
+
+- Principle: hybridisation of complementary bases! 
+- Transport RNA: codon (triplet van 3 basen) for each nucleic acid that is transported
+</br>  
+
+- Protein: chain of amino acids 
+
+    - there exist more than  400 amino acids
+    - only 20 were selected by life to build proteins. 
+
+![](./figs/Aminoacids_table.svg){width=50%}  
+(Source: wikipedia)
+
+</br>  
+
+- Code is evolved so that many mutations give rise to 
+
+  - synonymous codons (same amino acid) or
+  - to incorporate amino acids that are similar  
+  $\rightarrow$ protein function is conserved 
+
+</br>  
+
+- DNA is the carier of genetic material (cfr. hard drive)
+
+- RNA plays a more central role: 
+
+    - Messenger RNA (cfr RAM memory)
+    - Ribozymen: catalitic function
+        - transfer RNA for translation of proteins 
+        - in ribosomes for translatie of proteins 
+        - a lot of other rybozymes (catalic RNA)
+    - RNA primer essential to copy  DNA   
+    - Carrier of genetic material (e.g. corona virus)
+
+</br>  
+
+
+
+# Evolution and phylogenesis
+
+</br>
+
+
+</br>
+
+![](./figs/Phylogenetic_tree.svg)
+(Source: wikipedia)    
+
+</br>  
+
+## Evolution
+
+### Variability and selection
+
+Bacteria & Archae  
+![](./figs/Binary_Fission_2.svg){width=70%}  
+(Source: Ecoddington, wikipedia)
+
+Eukaryota
+![](./figs/Meiosis_Stages.svg)
+(Source: Ali Zifan, wikipedia)
+
+</br>  
+
+<center>
+![](./figs/DNA_polymerase.svg){width=40%}  
+(Source: wikipedia)
+</center>
+
+</br> 
+
+- Error margin of DNA  replication: 1 error per billion basepairs that are copied (Human genome 6.4 billion basepairs)  
+
+- Insertions/deletions: baseparen that are added or removed  
+
+- Recombination: reshuffling of genetic traits, e.g. during sexual reproduction (e.g. recombination of paternal and maternal segments during meiosis).
+$\rightarrow$ Mutations
+$\rightarrow$ Natural variability
+
+- Most mutaties are neutral $\rightarrow$ Moleculair/Genetic clock
+- But not always
+
+</br>  
+
+![](./figs/sickleCellWikipedia2.png)
+![](./figs/Sickle_Cells_wiki.jpeg){width=45%}
+![](./figs/Sickle_Cell_Anemia_wiki3.png){width=45%}  
+(Source: Thomas Samuel (1), OpenStax College (2), BruceBlaus(3), wikipedia)
+
+</br>  
+
+- Many in Africa 
+- Why does this mutation remains? 
+- Selection by ecofactors: malaria resistence 
+
+</br>  
+
+
+### Evolution
+
+
+- Natural process that forms the basis of the origin of species (plants, animals, bacteria, fungi, ... and homonids)
+
+- Driven by two opposing forces: **variation** en **selection**
+
+- Variation by spontaneous copy errors in genetic code:  mutations
+
+- Selection upon ecofactors, is mutation beneficial or harmfull for a particular organism in its specific environment.
+
+- Odds on fixation of mutation depends on reproductive success
+
+- Process of mutation and selection can eventually lead to new species upon many generations. 
+</br>  
+
+
+### Genetic drift 
+
+
+- Genetic drift: randpm fluctuations of allelles  
+
+- Particularly strong in small populations
+
+- As opposed to selection it is not adaptive. 
+
+- New species will originate more quickly when a small fraction of the population gets isolated in a new environment. 
+
+</br>  
+
+
+### Horizontal gene transfer 
+- Non sexual transfer of genetic information 
+
+- Very common between prokaryotes (eubacteria and arachae bacteria) 
+
+  - e.g. exchange of antibiotics resistance. 
+
+- between eukaryotes (mainly in protists, unicellular organisms with nucleus)  
+
+- between prokaryotes (eubacteria and arachae bacteria) and eukaryotes (protisten, fungae, plants and animals)
+
+</br>  
+
+### Teleonomy
+
+- There is only the primitive goal to maintain and reproduce the species. 
+
+- Evolution has no purpose or direction 
+
+- When complex organs and organisms originate its seems as if there is a direction/purpose but that is not the case. 
+
+</br>  
+
+![](./figs/evolutionEye.png){width=50%}  
+(Source: Matticus78, wikipedia)
+
+</br>  
+
+- The eye is not developed by evolution with the purpose to see. 
+
+- The eye only has the function to see
+
+- It is the result of a gradual process where each adaptation gave a reproductive advantage in a particular environment. 
+
+- In another environment it can be nolonger functional and than it might dissapear, e.g. moles eye 
+    
+- The origin of a species is the result of evolution but not the purpose of evolution. 
+
+- evolution is adaptation with as goal maintance and reproduction 
+
+</br>  
+
+#### Evolution has no direction
+
+- Distribution of number of species and complexity
+
+![](./figs/selectionNoDirectionDef.png)  
+(Source: Stephen J. Gould, 1996, Full House: the spread of Excellence from Plato To Darwin)  
+  
+- Distribution of carbon mass fixated in different types of species. 
+
+![](https://www.pnas.org/cms/10.1073/pnas.1711842115/asset/44253c25-afd5-4fa1-b060-31591f934f5d/assets/graphic/pnas.1711842115fig01.jpeg)  
+(Massa in giga ton koolstof. Source: doi.org/10.1073/pnas.1711842115)
+
+</br>  
+
+- Note, large error margin on bsacteria (can be a factor 10 larger). 
+
+- Number of bacterial cells in our body (Source: doi.org/10.1371/journal.pbio.1002533): 
+  - \#bacterial cells/\#human cells earlier estimated as $\pm$ 10/1 
+  - recent estimatiom  $\pm$ 1/1. 
+  - Human of 70kg $\pm$ 38 trillion bacterial cells/30 trillion humane cells (trillion: 1000 billion: 10$^12$!).
+
+
+</br>  
+
+## Phylogenese 
+
+Origin of all species by evolution
+
+![](./figs/Phylogenetic_tree.svg)  
+(Source: wikipedia)    
+
+- Rolando refers to origin of species and adaptation to the environment as evolutionary differentiation. 
+
+</br>  
+
+### Timescale
+
+![](https://naturedocumentaries.org/wp-content/uploads/2017/12/liferockystartstrip.jpg)
+
+| 4.5 BYA | 4.3 BYA | 3.8 BYA | 3.5 BYA | 540 MYA | 520 MYA |
+|---------|---------|---------|---------|---------|---------|
+|         |         |         |         |         |         |
+
+(Source: naturedocumetaries.org)
+
+
+- Black Earth (4.5 BYA): hot basalt rock and dust in a cold vacuum
+
+- Grey Earth (4.3 BYA): granite
+
+- Blue Earth (3.8 BYA): water
+
+- Red Earth (3.5 BYA): Radical change due to life. 
+
+    - Cyanobacteria $\rightarrow$ fotosynthesis $\rightarrow$ oxygen
+    - All iron in the ocean precipitates as iron oxide (rust, red) 
+    - 250 $\rightarrow$ > 5000 minerals. 
+    - Mass extinction
+  
+  
+- White Earth (540 MYA)
+    - Large ice age
+    - Mass extinction
+    - Volcanic activity comes to the rescue: greenhouse gasses 
+  
+  
+- Green Earth (520 MYA)
+    
+    - Explosion of life 
+    - fron unicellular to more complex life.  
+
+</br>  
+
+### Changepoint: Genesis of eukaryotic cell
+
+Tww archetypes: prokaryoten (simple cells,  0.1 to 5.0 $\mu m$) and eukaryotes (larger and more complex cells, 10-100 $\mu m$) 
+
+![](./figs/prokaryoteCell.svg){width=30%}
+![](./figs/animalCell.svg){width=30%}
+![](./figs/plantCell.svg){width=30%}  
+(Source:  Ali Zifan (1) & Mariana Ruiz Villarreal (2 & 3), wikipedia) 
+
+</br>  
+
+- 3.5 BYA - 520 MYA only prokaryote cells in fossils
+
+</br>  
+
+
+Genesis of Eukaryotic cell by endosymbiosis:
+
+![](./figs/endosymbiosis.svg)  
+(Source: Kelvinsong, wikipedia)
+
+</br>  
+
+- Prokaryotes: reproduction by cell devision, mutation fixed in all daugther cells. 
+
+</br>  
+
+- Eukaryotes: nearly all have a phase of sexual reproduction
+  
+  - much more variation: recombination of chromosomes
+  - diploid organisms have two copies of each gene (father and mother) $\rightarrow$ successive mutations in 1 copy possible in the presence of another functional copy of the gene. 
+  
+</br>  
+  
+- Eukaryotes evolve further in 
+
+  - protists (unicellular)
+  - fungae
+  - plants
+  - animals
+
+</br>  
+
+Genetic information of a species can be seen as a record of the environments and development that it underwent up to this point 
+
+</br>  
+
+## Evolution of evolution
+
+1. Chemical evolution: selection of building blocks and complex chemistry
+2. Biological evolution: cell/organism $\rightarrow$ selection genetic information and function
+3. Cultural evolution can bypass natural evolution:
+    
+    - artificial selection: breeding of plants, pets, cattle, genetic manipulation, etc.
+    - Technology: fast adaptation to new environment
+
+</br>  
+    
+# Ontogenesis
+
+- Ontogenesis: development of organism from fertilized egg cell to adult individual until death 
+
+- Each cell (except egg and sperm cell) of multi-cellular organism has same genetic material!
+
+
+- Why are cells of same organism so morphologically diverse? 
+
+</br>
+
+## Epigenetics
+
+![](./figs/Epigenetic_mechanisms.png)  
+(Source: NIH, wikipedia)
+
+</br>
+
+![](./figs/DNA_methylation_reprogramming.png)  
+(Source: Mariuswalter, wikipedia)
+
+</br>  
+
+- Differentiation $\rightarrow$ epigenetics
+
+- Epigenetics: epigenetic markers on DNA and histones $\rightarrow$ gene cam be transcribed or not. 
+
+- Epigenetics is driven by ecofactors. 
+
+- identical twins have almost the same genome (small differences have been build up in the womb), but it gets more easy to tell them apart over time: epigenetics
+
+
+</br> 
+
+<center>
+![](https://www.researchgate.net/profile/Tara-Hogenson/publication/320386487/figure/fig1/AS:783847914471429@1563895314907/dentical-twins-with-phenotypic-discordance-due-to-environmental-exposure-Although-MZ.png){width=50%}
+</center>
+(Difference due to eco-factor UV-exposure, Source: Swab & Hogenson, DOI: 10.1007/978-3-319-31143-2_65-1)
+
+</br> 
+
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/instance/3501579/bin/nihms402187f3.jpg)  
+(Source doi: 10.1111/j.1526-4637.2012.01488.x)
+
+</br>  
+
+- Epigenetics is very important in development of the brain and for learning. 
+
+- Wiring of the brain: 
+
+    - Hereditary
+    - Random
+    - Ecofactors select and amplify connections
+    - Connections that are not used disappear
+    - Communication (trough all senses) is key in development of child brain
+
+</br>  
+
+# Statistical Genomics 
+
+- Genomics is the studies all genetic information of an organism
+together: specific code, effects, functions and interactions
+
+- With current high throughput methods we can measure the entire 
+    - genome
+    - transcriptome: expressed transcript of all genes
+    - proteome: all translated proteins
+    - epigenome
+    - ...
+    
+- With statistical genomics we will try to make sense of this wealth of data so that we can find biomarkers and 'omics patterns that are reproducible. 
+
+
+# Closing remarks 
+
+- Life is
+    - one
+    - chemistry 
+    - information 
+
+</br>  
+
+- Note, however that we should not reduce organisms to their genome
+- Indeed, organisms and life cannot be studied without considering there intimate relation to their environment/ecosystem
+
+    - molecules do not work alone but in large networks
+    - environmental conditions are important for self organisation
+    - selective evolution: selection by eco-factors 
+    - organisms adapt/shape in turn their environment and eco-factor: e.g. cyanobacteria
+    - individual evolution: eco-factors $\leftrightarrow$ epigenetics 
+    - eco-factors are also determined by other organisms: eco-system
+    - Organisms interact and collaborate in their ecosystem
+    - Genetic information can be considered as the record of all conditions in which our ancestral cells have lived.   
+      
+      $\rightarrow$ "Web of Life" 
+
+
+# Organization of the course
+
+## Module I: Quantitative Proteomics
+
+  1. Identification and quantification of peptides and proteins
+  2. Data exploration and quality control using plots
+  3. Preprocessing: log-transformation, Filtering, Normalization,
+Summarization
+  4. Dealing with batch effects and other confounders
+  5. Statistical Concepts
+  
+      1. Linear models/Linear mixed models
+      2. Trade-off between biological relevance/effect size vs statistical
+significance
+      3. Empirical Bayes Methods
+      4. Multiple testing
+    
+## Module II: Next generation sequencing (NGS, Transcriptomics)
+
+  1. NGS Data exploration
+  2. Preprocessing/normalization
+  3. Additional Statistical Concepts
+    
+      1. Generalized linear models (GLM) for binary data
+      2. GLM for count data
+      3. Overdispersion
+
+## Details
+
+  1. Theory and Tutorials are blended
+    
+      - Module I: week 1-5
+      - Module II: week 6-10
+      - Project: week 1-10 via small assignments + week 11-12
+  
+  2.  Communication and submission of projects via Ufora
+  3. All tutorials from week 2 onwards are based on
+R/Bioconductor via R-studio
+Scripts are made in R/markdown: a file format to combine
+text, R code and R output.
+

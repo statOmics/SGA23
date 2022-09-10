@@ -1,40 +1,39 @@
-name: "my-website"
+name : "SGA"
+title : "Statistical Genomics Analysis (SGA)"
 navbar:
-  title: "My Website"
+  title: "SGA"
   left:
     - icon: fa-home
       href: index.html
-    - text: "About"
-      href: about.html
+      
     - text: "Lectures"
       icon: fa-chalkboard-teacher
       menu:
-        - text: "Example"
-          href: example.html
-    - text: "Labs"
+      - text: 1.1 Position
+        href: intro.html
+      - text: 1.2 Recap linear model
+        href: recapGeneralLinearModel.html
+
+    - text: "tutorials"
       icon: fa-laptop
       menu:
-      - text: "Lab 1"
-        href:
-      - text: "Lab 2"
-        href:
-  right:
-    - icon: fab fa-github
-      href: https://github.com/statOmics/Rmd-website
+      - text: 1 Intro KPNA2
+        href: multipleRegression_KPNA2.html
+
+
+right:
+    - icon: fab fa-github      
+      href: https://github.com/statOmics/SGA21
     - text: "statOmics"
       href: http://statomics.github.io/
 output:
-  html_document:
+    html_document:
       code_download: true
-      df_print: paged
-      theme: flatly
-      highlight: tango
+      theme: cosmo
       toc: true
       toc_float: true
+      highlight: tango
       number_sections: true
-      code_folding: show
-      include:
-        after_body: footer.html
-      css: style.css
+      df_print: paged
 new_session: true
-exclude: ["renv.lock"]
+exclude: ["install.R"]

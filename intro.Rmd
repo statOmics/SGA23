@@ -513,7 +513,7 @@ $\rightarrow$ Natural variability
 
 </br>  
 
-- Note, large error margin on bsacteria (can be a factor 10 larger). 
+- Note, large error margin on bacteria (can be a factor 10 larger). 
 
 - Number of bacterial cells in our body (Source: doi.org/10.1371/journal.pbio.1002533): 
   - \#bacterial cells/\#human cells earlier estimated as $\pm$ 10/1 

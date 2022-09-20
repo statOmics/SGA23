@@ -10,12 +10,17 @@ output:
       toc_float: true
       highlight: tango
       number_sections: true
+    bookdown::pdf_document2:
+      toc: true
+      number_sections: true
+      latex_engine: xelatex
+always_allow_html: true
 ---
 
 
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
-This is part of the online course [Statistical Genomics 2021 (SGA21)](https://statomics.github.io/SGA21/)
+This is part of the online course [Statistical Genomics 2022 (SGA)](https://statomics.github.io/SGA/)
 
 # Breast cancer example
 
@@ -24,32 +29,34 @@ This is part of the online course [Statistical Genomics 2021 (SGA21)](https://st
 Association of histologic grade on expression of KPNA2 gene that is known to be associated with poor BC prognosis.
 - Population: all current and future breast cancer patients
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-1.jpeg)
-
----
-
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-2.jpeg)
-
----
-
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-3.jpeg)
-
 ---
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-4.jpeg)
+![](./figures/statGenomicsGent201718-1.jpeg)
 
 ---
 
+![](./figures/statGenomicsGent201718-2.jpeg)
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-5.jpeg)
+---
+
+![](./figures/statGenomicsGent201718-3.jpeg)
 
 ---
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-6.jpeg)
+![](./figures/statGenomicsGent201718-4.jpeg)
 
 ---
+
+
+![](./figures/statGenomicsGent201718-5.jpeg)
+
+---
+
+
+![](./figures/statGenomicsGent201718-6.jpeg)
+
 
 # Data Exploration
 
@@ -116,7 +123,7 @@ Researchers want to assess the association of the histological grade on KPNA2 ge
 
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-6.jpeg)
+![](./figures/statGenomicsGent201718-6.jpeg)
 
 ---
 
@@ -141,7 +148,7 @@ effectSize
 
 ---
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-7.jpeg)
+![](./figures/statGenomicsGent201718-7.jpeg)
 
 
 ---
@@ -197,7 +204,7 @@ $$
 
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-8.jpeg)
+![](./figures/statGenomicsGent201718-8.jpeg)
 
 ---
 
@@ -237,12 +244,12 @@ There is a extremely significant association of the histological grade on the ge
 
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-10.jpeg) 
+![](./figures/statGenomicsGent201718-10.jpeg) 
 
 ---
 
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-11.jpeg)
+![](./figures/statGenomicsGent201718-11.jpeg)
 
 ---
 
@@ -250,7 +257,7 @@ The patients also differ in the their lymph node status. Hence, we have a two fa
 
 Solution??
 
-![](https://raw.githubusercontent.com/statOmics/SGA21/master/figures/statGenomicsGent201718-12.jpeg)
+![](./figures/statGenomicsGent201718-12.jpeg)
 
 ---
 

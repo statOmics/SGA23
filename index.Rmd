@@ -50,7 +50,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 # Detailed Program
 
 
-1. Position of the course: [HTML](./intro.html), [PDF](./intro.pdf) 
+1. Position of the course: [HTML](./intro.html) 
 
 2. Recap Linear Models (Week 1)
 

@@ -49,7 +49,7 @@ Note, that DNA was not known yet when Schrödinger wrote his seminal book.
     - based on chemical reactions
     - an open system
     - solar energie 
-    - chaos of molecule on earth  
+    - chaos of molecules on earth  
     - While chemical reactions produce structure a lot of energy is lost into heat: dissipation. 
       
       $\rightarrow$ Increase of entropy
@@ -58,11 +58,9 @@ Note, that DNA was not known yet when Schrödinger wrote his seminal book.
 
 Prigogine did research to chemical systems far from equilibrium. 
 
-- Open systems: influx of mater en energy 
+- Open systems: influx of matter en energy 
 
 - Reactions consist of many feedback loops  
-
-- They can generate structure: e.g chemical clocks, spatial and spatio-temporal waves in concentration of chemicals 
 
 - They dissipate incoming energy while producing structure
 
@@ -70,7 +68,7 @@ Prigogine did research to chemical systems far from equilibrium.
 
 </br>
 
-Our solar system is a dissipative zone where order can originate from chaos. 
+Our globe is lying in a dissipative zone 
 
 - Life produces entropy by dissipating energy from photons (light and UV) to heat through organic pigments (e.g. chlorophyll)   
 
@@ -83,7 +81,7 @@ Our solar system is a dissipative zone where order can originate from chaos.
 ## Definition according to de Duve
 
 
-Book: "Life Evolving - Molecules, Mind and Meaning" (de Duve, 2002)
+Book: "Life Evolving - Molecules, Mind and Meaning" (de Duve, 2002, First chapters give a very good overview. Later chapters get rather speculative).
 
 Life is 
 
@@ -93,7 +91,11 @@ Life is
 
 </br>  
 
-Origin of leven:
+In bioinformatics we will work with the information part of life, however, we should not forget that life is more than that! 
+
+</br>
+
+Origin of life:
 
 - first energy
 - then chemistry and
@@ -126,7 +128,7 @@ Origin of leven:
 
 #### LUCA (last Universal Common Ancestor).
 
-- All cells orginate from the same population of ancestral cells  
+- All cells orginate from the same population of ancestral cells living 3.5-3.8 billion years ago.  
 
 ![](./figs/Phylogenetic_tree.svg)
 (Source: wikipedia)    
@@ -279,7 +281,7 @@ allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></if
 
 </br>  
 
-Researcher found that the following was required for this: 
+Researchers found that the following was required for this: 
 
 - ATP: the energy source of a cell 
 - a filamentous proteines (microtubuli) 
@@ -290,7 +292,7 @@ Researcher found that the following was required for this:
 
 </br>  
 
-Protein plays a central role in life: Catalysis + structure 
+Proteins plays a central role in life: Catalysis + Structure 
 
 A cell thus inherits not only genetic information but also its spatial organisation from a mother cell. 
 
@@ -299,14 +301,6 @@ A cell thus inherits not only genetic information but also its spatial organisat
 ### Life is information
 
 </br>  
-<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
-<iframe
-src="https://www.youtube.com/embed/ult4_6hh5zo"
-frameborder="0"
-style=" position:absolute;top: 0;left: 0;width: 100%;height: 100%;"
-allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></iframe>
-</div>
-</br> 
 
 - Gene: unit of genetic material, a DNA sequence that is encoding for the synthesis of a gene product, a protein or a functional RNA. 
 
@@ -315,8 +309,8 @@ allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></if
 
 </br>
 
-- DNA: 4 letter code (4 basen: ACGT)
-- RNA: 4 letter code (4 basen: ACGU)
+- DNA: 4 letter code (4 bases: ACGT)
+- RNA: 4 letter code (4 bases: ACGU)
 
 ![](./figs/Difference_DNA_RNA-EN.svg){width=50%}  
 (Source: Sponk, wikipedia)
@@ -355,11 +349,11 @@ allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></if
 - RNA plays a more central role: 
 
     - Messenger RNA (cfr RAM memory)
-    - Ribozymen: catalitic function
+    - Ribozymes: catalitic function
         - transfer RNA for translation of proteins 
-        - in ribosomes for translatie of proteins 
+        - in ribosomes for translation of proteins 
         - a lot of other rybozymes (catalic RNA)
-    - RNA primer essential to copy  DNA   
+    - RNA primer essential to copy DNA   
     - Carrier of genetic material (e.g. corona virus)
 
 </br>  
@@ -407,7 +401,7 @@ Eukaryota
 $\rightarrow$ Mutations
 $\rightarrow$ Natural variability
 
-- Most mutaties are neutral $\rightarrow$ Moleculair/Genetic clock
+- Most mutaties are neutral $\rightarrow$ Molecular/Genetic clock
 - But not always
 
 </br>  
@@ -446,7 +440,7 @@ $\rightarrow$ Natural variability
 ### Genetic drift 
 
 
-- Genetic drift: randpm fluctuations of allelles  
+- Genetic drift: random fluctuations of alleles  
 
 - Particularly strong in small populations
 
@@ -495,7 +489,7 @@ $\rightarrow$ Natural variability
     
 - The origin of a species is the result of evolution but not the purpose of evolution. 
 
-- evolution is adaptation with as goal maintance and reproduction 
+- Evolution is adaptation with as goal maintance and reproduction 
 
 </br>  
 
@@ -518,7 +512,7 @@ $\rightarrow$ Natural variability
 - Number of bacterial cells in our body (Source: doi.org/10.1371/journal.pbio.1002533): 
   - \#bacterial cells/\#human cells earlier estimated as $\pm$ 10/1 
   - recent estimatiom  $\pm$ 1/1. 
-  - Human of 70kg $\pm$ 38 trillion bacterial cells/30 trillion humane cells (trillion: 1000 billion: 10$^12$!).
+  - Human of 70kg $\pm$ 38 trillion bacterial cells/30 trillion humane cells (trillion: 1000 billion: 10$^{12}$!).
 
 
 </br>  
@@ -529,8 +523,6 @@ Origin of all species by evolution
 
 ![](./figs/Phylogenetic_tree.svg)  
 (Source: wikipedia)    
-
-- Rolando refers to origin of species and adaptation to the environment as evolutionary differentiation. 
 
 </br>  
 
@@ -568,13 +560,13 @@ Origin of all species by evolution
 - Green Earth (520 MYA)
     
     - Explosion of life 
-    - fron unicellular to more complex life.  
+    - from unicellular to more complex life.  
 
 </br>  
 
 ### Changepoint: Genesis of eukaryotic cell
 
-Tww archetypes: prokaryoten (simple cells,  0.1 to 5.0 $\mu m$) and eukaryotes (larger and more complex cells, 10-100 $\mu m$) 
+Two archetypes: prokaryoten (simple cells,  0.1 to 5.0 $\mu m$) and eukaryotes (larger and more complex cells, 10-100 $\mu m$) 
 
 ![](./figs/prokaryoteCell.svg){width=30%}
 ![](./figs/animalCell.svg){width=30%}
@@ -655,7 +647,7 @@ Genetic information of a species can be seen as a record of the environments and
 
 - Differentiation $\rightarrow$ epigenetics
 
-- Epigenetics: epigenetic markers on DNA and histones $\rightarrow$ gene cam be transcribed or not. 
+- Epigenetics: epigenetic markers on DNA and histones $\rightarrow$ gene can be transcribed or not. 
 
 - Epigenetics is driven by ecofactors. 
 
@@ -678,13 +670,7 @@ Genetic information of a species can be seen as a record of the environments and
 
 - Epigenetics is very important in development of the brain and for learning. 
 
-- Wiring of the brain: 
 
-    - Hereditary
-    - Random
-    - Ecofactors select and amplify connections
-    - Connections that are not used disappear
-    - Communication (trough all senses) is key in development of child brain
 
 </br>  
 
@@ -718,7 +704,7 @@ together: specific code, effects, functions and interactions
     - molecules do not work alone but in large networks
     - environmental conditions are important for self organisation
     - selective evolution: selection by eco-factors 
-    - organisms adapt/shape in turn their environment and eco-factor: e.g. cyanobacteria
+    - organisms adapt/shape in turn their environment and eco-factors: e.g. cyanobacteria
     - individual evolution: eco-factors $\leftrightarrow$ epigenetics 
     - eco-factors are also determined by other organisms: eco-system
     - Organisms interact and collaborate in their ecosystem

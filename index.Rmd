@@ -49,10 +49,11 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 # Detailed Program
 
+## 1. Introduction
 
-1. Position of the course: [HTML](./intro.html) 
+1.1. Position of the course: [HTML](./intro.html) 
 
-2. Recap Linear Models (Week 1)
+1.2. Recap Linear Models (Week 1)
 
    - Lecture: [HTML](./recapGeneralLinearModel.html), [PDF](./recapGeneralLinearModel.pdf)
    - Tutorial KPNA2: [HTML](./multipleRegression_KPNA2.html),  [PDF](./multipleRegression_KPNA2.pdf)

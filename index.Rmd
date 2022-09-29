@@ -57,3 +57,10 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
    - Lecture: [HTML](./recapGeneralLinearModel.html), [PDF](./recapGeneralLinearModel.pdf)
    - Tutorial KPNA2: [HTML](./multipleRegression_KPNA2.html),  [PDF](./multipleRegression_KPNA2.pdf)
+   
+## Module I: Proteomics Data Analysis (Week 1-5)
+
+1. Bioinformatics for proteomics
+   
+   - Lecture: [PDF](./docs/martens_proteomics_bioinformatics.pdf), [youtube](https://www.youtube.com/watch?v=ZgwNWRul98o)
+   - Tutorials: [identification](https://www.compomics.com/bioinformatics-for-proteomics/)

@@ -265,7 +265,7 @@ allow="autoplay; encrypted-media" allowfullscreen data-external="1" start=8></if
 
 #### Self-organisation
 
-- Some proteins also give structure to a cel 
+- Some proteins also give structure to a cell 
 - The can spontaneously form structrue 
 - See video where cytoplasm ("liquid in cell") was homogenised and is subsequently organising itself in cell-like structures. 
 </br>  

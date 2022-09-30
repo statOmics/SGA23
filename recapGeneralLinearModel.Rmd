@@ -579,7 +579,6 @@ So the column space of X is a plane in the three dimensional space.
 \]
 
 1. Plane spanned by column space:
-The other picture to linear regression is to consider $X_0$, $X_1$ and $Y$ as vectors in the space of the data $\mathbb{R}^n$, here $\mathbb{R}^3$ because we have three data points.
 
 
 ```{r}
@@ -828,7 +827,7 @@ p5 <- p4 %>%
 p5
 ```
 
-- Yhat is the resulting vector that lies in the plane spanned by $\mathbf{U}_1$ and $\mathbf{U}_2$ and thus also in the column space of $\mathbf{X}$.
+- $\hat{\mathbf{Y}}$ is the resulting vector that lies in the plane spanned by $\mathbf{U}_1$ and $\mathbf{U}_2$ and thus also in the column space of $\mathbf{X}$.
 
 ```{r}
 p6 <- p5 %>%
@@ -914,7 +913,7 @@ e.g.
 \right]\]
 - we can write that contrast using a contrast matrix:
 \[
-\mathbf{L}=\left[\begin{array}{c}0\\1\\0\\1\end{array}\right] \rightarrow \mathbf{L}^T\boldsymbol{beta} \]
+\mathbf{L}=\left[\begin{array}{c}0\\1\\0\\1\end{array}\right] \rightarrow \mathbf{L}^T\boldsymbol{\beta} \]
 
 - Then the variance becomes:
 \[

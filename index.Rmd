@@ -61,7 +61,24 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
    
 ## Module I: Proteomics Data Analysis (Week 1-5)
 
-1. Bioinformatics for proteomics
+### 1. Bioinformatics for proteomics
    
    - Lecture: [PDF](./docs/martens_proteomics_bioinformatics.pdf), [youtube](https://www.youtube.com/watch?v=ZgwNWRul98o)
    - Tutorials: [identification](https://www.compomics.com/bioinformatics-for-proteomics/)
+
+### 2. Statistics for Proteomics Data Analysis
+   
+#### 2.1. Identification
+
+- [Target Decoy QC](TargetDecoy.html)
+- [Tutorial](TargetDecoyTutorial.html), [example](mzIDMsgfSwissprotExample.html)
+
+#### 2.2. Preprocessing & Analysis of Label Free Quantitative Proteomics Experiments with Simple Designs
+  - Lecture: [html](./pda_quantification_preprocessing.html), [pdf](./pda_quantification_preprocessing.pdf)
+  - Tutorial: [preprocessing](./pda_tutorialPreprocessing.html)
+  - Wrap-up Peptide-based Models: [html](./pda_robustSummarisation_peptideModels.html), [pdf](./pda_robustSummarisation_peptideModels.pdf)
+
+#### 2.3. Statistical Inference & Analysis of Experiments with Factorial Designs
+  - Lecture Differential Abundance Analysis: [html](./pda_quantification_inference.html), [pdf](./pda_quantification_inference.pdf)
+  - Tutorial: [Design](pda_tutorialDesign.html)
+  - Wrap-up Blocking: [html](./pda_blocking_wrapup.html), [pdf](./pda_blocking_wrapup.pdf)

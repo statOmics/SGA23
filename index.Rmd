@@ -72,6 +72,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 - [Target Decoy QC](TargetDecoy.html)
 - [Tutorial](TargetDecoyTutorial.html), [example](mzIDMsgfSwissprotExample.html)
+- Solution: [Uniprot search](mzIDuniprotTutorial.html)
 
 #### 2.2. Preprocessing & Analysis of Label Free Quantitative Proteomics Experiments with Simple Designs
   - Lecture: [html](./pda_quantification_preprocessing.html), [pdf](./pda_quantification_preprocessing.pdf)

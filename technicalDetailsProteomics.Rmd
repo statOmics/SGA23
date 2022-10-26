@@ -931,7 +931,7 @@ head(rowData(pe[["proteinRobust"]])$tissueV)
 range(rowData(pe[["proteinRobust"]])$tissueV$adjPval - pAdj,na.rm=TRUE)
 ```
 
-#### Illustration in simulation under $H_0$ and heart case study
+### Illustration in simulation under $H_0$ and heart case study
 
 ```{r}
 volcano <- ggplot(rowData(sims[["sim0"]])$tissueV,

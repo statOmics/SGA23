@@ -87,4 +87,12 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
   - Solution: [Heart Example](heartMainInteraction.html)
   - Technical Details: [Technical Details](technicalDetailsProteomics.html)
   
+## Module II: Next-generation Sequencing (Week 6-12)
+  
+### 1. Introduction to sequencing technology, preprocessing and working with count data.
+
+- Lecture Introduction to Sequencing: [html](./sequencing_intro.html), [pdf](./sequencing_intro.pdf)
+- Lecture Working with count data and GLMs: [html](./sequencing_countData.html), [pdf](./sequencing_countData.pdf)
+
+
 

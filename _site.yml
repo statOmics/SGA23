@@ -27,6 +27,14 @@ navbar:
         href: pda_quantification_inference.html
       - text: 2.3.2. Wrap-up DA - Blocking
         href: pda_blocking_wrapup.html
+      - text: 2.3.3 Technical Details
+        href: technicalDetailsProteomics.html
+      - text: ---- MODULE I PROTEOMICS ----
+      - text: 1.1.  Introduction to RNA-seq
+        href: sequencing_intro.html
+      - text: 1.2.  Working with count data and GLMs
+        href: sequencing_countData.html
+      
 
     - text: "tutorials"
       icon: fa-laptop

@@ -41,13 +41,14 @@ suppressPackageStartupMessages({
 # The study of gene expression
 
  - The first part of this course focussed on proteomics, studying the concentration of proteins in biological samples. We have seen that identification of proteins and measuring their respective concentrations are extremely challenging, leading to many technological and statistical challenges in order to interpret these data.
+ 
  - In the second part of the course, we will focus on measuring gene expression, i.e., measuring the concentration of mRNA molecules, that may eventually be translated into proteins, but may also have functions on their own.
 
 ```{r fig.cap='Central Paradigm of Biology: a gene, a specific region in the DNA, is first transcribed into RNA and then into proteins. Note, that for RNA-genes the RNA molecule is the end product itself, which is referred to as non-coding RNA (ncRNA) (Source: Wikipedia)'}
 include_graphics("./images_sequencing/centralParadigm.png")
 ```
 
-- Alternative splicing 
+## Alternative splicing 
 
 ```{r fig.cap='Alternative splicing allows a single gene in Eucaryotes to code for multiple proteins. During alternative splicing particular exons of a gene may be included or excluded from the premature messenger RNA when producing the messenger RNA (mRNA) from that gene. Hence exons can be joined in different combinations, leading to different (alternative) mRNA strands. The proteins translated from alternatively spliced mRNAs thus differ in their amino acid sequence and, often, in their biological functions (Source: Wikipedia)'}
 include_graphics("./images_sequencing/alternative_splicing.png")
@@ -65,13 +66,13 @@ include_graphics("./images_sequencing/alternative_splicing.png")
 include_graphics("./images_sequencing/seqTechnology_throughput.png")
 ```
 
-- From sample to data analysis
+## From sample to data analysis
 
 ```{r, echo=FALSE, fig.cap=paste("Figure: The sequencing workflow. Image adapted from Van den Berge et al. (2019).")}
 include_graphics("./images_sequencing/seqWorkflow3.png")
 ```
 
-- Illumina Sequencing 
+## Illumina Sequencing 
 
 ```{r, echo=FALSE, fig.cap=paste("Figure: Illumina sequencing steps 1-6 (Source: Illumina)")}
 include_graphics("./images_sequencing/illuminaSeq-step1-6.jpg")
@@ -80,12 +81,13 @@ include_graphics("./images_sequencing/illuminaSeq-step1-6.jpg")
 include_graphics("./images_sequencing/illuminaSeq-step7-12.jpg")
 ```
 
-- Single vs paired end
+## Single vs paired end
 
 ```{r, echo=FALSE, fig.cap=paste("Figure: Single vs paired end sequencing. In contrast to single-end sequencing, paired-end sequencing allows users to sequence both ends of a fragment (Image adopted from Zhernakova et al., 2013, doi.org/10.1371/journal.pgen.1003594).")}
 include_graphics("./images_sequencing/singleEndVsPairedEnd.png")
 ```
-## The sequencing workflow
+
+## The sequencing workflow with Details
 
 Library preparation steps
 
@@ -190,7 +192,7 @@ Finally, a note on terminology. In this text we will use the words 'read' or 'fr
  - Along with a reference genome, an annotation GFF or GTF file defines the coordinates of specific genomic features.
  - While here we will focus on reference-based alignment, i.e., alignment where a reference genome or transcriptome is available, note that a *de novo* construction of a reference transcriptome is also possible, where the reference may be constructed from the observed sequencing reads.
 
-```{r refGenome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson"}
+```{r refGenome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
 knitr::include_graphics("./images_sequencing/humanReferenceGenome.pdf")
 ```
 
@@ -201,7 +203,7 @@ include_graphics("./images_sequencing/referenceGenome.png")
 ```
 
 
-```{r refTranscriptome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson"}
+```{r refTranscriptome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
 knitr::include_graphics("./images_sequencing/humanReferenceTranscriptome.pdf")
 ```
 

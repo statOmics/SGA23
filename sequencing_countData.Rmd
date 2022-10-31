@@ -397,7 +397,7 @@ Note, that
 - The tag-wise dispersions are the result of shrinking the gene-wise dispersion to the trend (orange dots)
 
 ```{r refGenome, echo=FALSE, fig.cap="QQ-plots of goodness of fit statistics using common, trended or empirical Bayes. Image from McCarthy and Smyth, 2012, NAR, DOI: 10.1093/nar/gks042"}
-knitr::include_graphics("./images_sequencing/NARDispersion.pdf")
+knitr::include_graphics("./images_sequencing/NARDispersion.png")
 ```
 
 # Statistical Inference 
@@ -421,8 +421,3 @@ lrt <- glmLRT(fit)
 topTags(lrt)
 ```
 
-
- - [Marioni *et al.* (2008)](https://genome.cshlp.org/content/18/9/1509) describe the distribution of gene expression counts across technical replicates, and in addition discuss lane effects in RNA-seq, as well as a comparison between RNA-seq and array-based platforms.
- 
- 
- 

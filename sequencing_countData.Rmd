@@ -185,7 +185,7 @@ where $Y_i$ is the response variable, with mean $\mu_i$, $\eta_i$ is the linear 
 
 # Sequencing Data
 
-In this lecture we will start working with a real bulk RNA-seq dataset from [Haglund *et al.* (2012)](https://academic.oup.com/jcem/article/97/12/4631/2536573). 
+In this lecture we will use a subset of the real bulk RNA-seq dataset from [Haglund *et al.* (2012)](https://academic.oup.com/jcem/article/97/12/4631/2536573).
 
 Lets try to work out the experimental design using the following paragraph from the Methods section of the paper.
 
@@ -224,20 +224,38 @@ dupl <- which(table(colData(se)$sample) > 1) %>% names
 techreps <- assays(se)$counts[,colData(se)$sample==dupl[1]]
 ```
 
-Explore data of two technical repeats.
+### Explore the data of two technical repeats
+
+We expect the counts to be very similar. Indeed, they are based on the same cell culture, stimulated with the same stimulus and incubated for the same time. 
 
 ```{r}
 qplot(techreps[,1],techreps[,2]) +
   geom_abline(intercept = 0, slope = 1) + 
   xlab("Technical repeat 1") +
   ylab("Technical repeat 2")
+```
 
+- The plot shows a systematic difference between the counts of both technical repeats!
+
+- However, plotting the data on the original count scale does not give a good overview of the data. The plot is dominated by a few very abundant genes, i.e. genes with very high counts. 
+
+### Explore the data of two technical repeats
+
+
+```{r}
 qplot(techreps[,1],techreps[,2], log="xy") +
   geom_abline(intercept = 0, slope = 1) + 
   xlab("Technical repeat 1") +
   ylab("Technical repeat 2")
+```
 
+- The plot clearly shows that the counts for all genes are very different in the two technical repeats. 
 
+- However, we have to look at the plot via the diagonal. 
+
+- In omics we therefore often use MA plots. With M (log ratio) and A (log average). 
+
+```{r}
 A <- techreps %>% log2 %>% rowMeans
 M <- techreps %>% log2 %>% apply(.,1,diff)
 w <- techreps[,1]==min(techreps[,1]) | techreps[,2]==min(techreps[,2])
@@ -248,28 +266,35 @@ if (any(w)) {
 
 MAplot <- qplot(A, M, col=w) +
   theme(legend.position = "none") + 
-  scale_color_manual(values = c("black","orange")) 
+  scale_color_manual(values = c("black","orange")) +
+  xlab("A: log2 Average") +
+  ylab("M: log2 Fold Change")
 
 MAplot +
   geom_abline(intercept=0,slope=0)
 ```
 
+The MA plot clearly shows that the counts of one technical repeat are systematically higher than that of the other technical repeats. 
 
 ```{r}
 colSums(techreps)
-logFCavg <- colSums(techreps) %>% log2 %>% diff
-logFCavg
+logFCdepth <- colSums(techreps) %>% log2 %>% diff
+logFCdepth
+2^logFCdepth
 ```
 
-The technical repeats differ almost with a factor 2 in sequencing depth! 
+The technical repeats differ with a factor `r round(2^logFCdepth,1)` in sequencing depth! 
 
 
 ```{r}
-MAplot + geom_abline(intercept = logFCavg, slope = 0)
+MAplot + geom_abline(intercept = logFCdepth, slope = 0, color="red")
 ```
 
+- This log2 fold change in sequencing depth is also the baseline around which the log2 fold changes between technical repeats of individual genes are fluctuating! 
 
-### Count scaling using GLM offsets 
+Hence, we will have to correct for differences in sequencing depth. 
+
+## Count scaling using GLM offsets 
 
 - We have previously discussed count scaling transformations such as CPM and TPM.
 
@@ -292,7 +317,7 @@ $\rightarrow$ i.e. sample being sequenced deeper contains more information as co
   \right.
   $$
 
-When we would like to correct for the overall sequencing depth $O_{gi}=N_i$. Note, that better offsets exist!
+When we would like to correct for the overall sequencing depth $O_{gi}=N_i$. However, better offsets exist!
 
 Note, that 
 
@@ -349,28 +374,63 @@ $$
 ##  What about technical repeats? 
 
 - Technical repeats are Poisson distributed.
-- The sum of two Poisson distributed counts is again Poisson. So we can summarize over technical repeats by taking the sum of the counts. 
+- The sum of two Poisson distributed counts is again Poisson. So we can summarize over technical repeats by taking the sum of the counts. This enables us to collapse the technical repeats to the level of biological repeats. 
+- We will illustrate that in the tutorial session.
 
 ## Estimating the overdispersion?
 
-- For every single gene: not enough data 
+- Gene wise: for every single gene, very unstable due to the lack of data 
 - Common dispersion for all genes 
 - Trended dispersion
-- Gene wise, EB shrinkage to a common (trended) dispersion: Borrow strength across genes (McCarthy & Smyth (2012). Nucleic Acid Research)
+- Tag-wise: EB shrinkage to a common (trended) dispersion: Borrow strength across genes (McCarthy & Smyth, 2012, [DOI: 10.1093/nar/gks042](https://doi.org/10.1093/nar/gks042))
+
+In the tutorials we will analyse the entire study and we will focus on assessing the main research questions: i.e. comparing the early and late effects of the stimuli, and if the effect of stimuli is changes over time. 
+
+Here, we illustrate the estimation using the edgeR tool on a subset of control treatment for patients 1, 2 and 3. For this subset only biological repeats are sequenced and a measurement on time 24 and 48h has been taken for cells of each patient.  
+So we can model the study using a simple block design with a time effect and a block effect for patient.
+
+1. Setup the data
+ 
 
 ```{r}
-seSub <- se[,colData(se)$treatment=="Control"]
+seSub <- se[,colData(se)$treatment=="Control"&colData(se)$patient%in%1:3]
+colData(seSub)$patient <- colData(seSub)$patient %>% 
+  as.double %>% 
+  as.factor
 y <- DGEList(counts = assays(seSub)$counts)
 
-design <- model.matrix(~time,colData(seSub))
-keep <- filterByExpr(y,design)
-y <- calcNormFactors(y)
-y <- estimateDisp(y, design)
-yNoEB <- estimateDisp(y, design, prior.df = 0)
-o <- order(y$AveLogCPM)
+design <- model.matrix(~time+patient,colData(seSub))
 ```
 
+2. Typically lowly expressed genes are filtered. 
+
 ```{r}
+keep <- filterByExpr(y,design)
+y <- y[keep,]
+```
+
+3. Normalisation to correct for differences in library size.
+
+```{r}
+y <- calcNormFactors(y)
+```
+
+4. Estimate the dispersions using empirical Bayes (EB)
+
+```{r}
+y <- estimateDisp(y, design)
+```
+
+5. Estimate gene-wise dispersions without shrinkage for comparison purposes 
+
+```{r}
+yNoEB <- estimateDisp(y, design, prior.df = 0)
+```
+
+6. Visualisation and comparison of tag-wise (EB) and genewise dispersion 
+
+```{r}
+o <- order(y$AveLogCPM)
 data.frame(
   AveLogCPM=rep(yNoEB$AveLogCPM[o],2),
   BCV=sqrt(
@@ -394,7 +454,15 @@ Note, that
 
 - The gene-wise dispersion is very variable (black dots).
 - There is a dispersion - mean trend (blue line)
-- The tag-wise dispersions are the result of shrinking the gene-wise dispersion to the trend (orange dots)
+- The tag-wise dispersions (orange dots) are the result of shrinking the gene-wise dispersion (black dots) to the trend (blue line) 
+
+By default edgeR provides the following plot 
+
+```{r}
+plotBCV(y)
+```
+
+In the methods paper of edgeR different dispersion estimators were compared and the tag-wise dispersions seemed to provide the best goodness of fit. 
 
 ```{r refGenome, echo=FALSE, fig.cap="QQ-plots of goodness of fit statistics using common, trended or empirical Bayes. Image from McCarthy and Smyth, 2012, NAR, DOI: 10.1093/nar/gks042"}
 knitr::include_graphics("./images_sequencing/NARDispersion.png")
@@ -406,7 +474,9 @@ knitr::include_graphics("./images_sequencing/NARDispersion.png")
 
 - Implemented in edgeR and DESeq2.
 
-- Again we have to correct for multiple testing !!!
+- Again we have to correct for multiple testing !!! FDR correction is done by  default in the edgeR and DESeq2 output 
+
+1. Fit the model
 
 ```{r}
 fit <- glmFit(y,design)
@@ -416,8 +486,10 @@ head(fit$coefficients)
 Interpretation of model parameters? 
 
 
+2. Statistical test to assess the time effect 
+
 ```{r}
-lrt <- glmLRT(fit)
+lrt <- glmLRT(fit, coef = "time48h")
 topTags(lrt)
 ```
 

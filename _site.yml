@@ -30,9 +30,9 @@ navbar:
       - text: 2.3.3 Technical Details
         href: technicalDetailsProteomics.html
       - text: ---- MODULE I PROTEOMICS ----
-      - text: 1.1.  Introduction to RNA-seq
+      - text: 1.  Introduction to RNA-seq
         href: sequencing_intro.html
-      - text: 1.2.  Working with count data and GLMs
+      - text: 2.  Working with count data and GLMs
         href: sequencing_countData.html
       
 
@@ -50,7 +50,12 @@ navbar:
       - text: 2.2. Quantification - Preprocessing
         href: pda_tutorialPreprocessing.html
       - text: 2.3. Quantification - Design
-        href: pda_tutorialDesign.html     
+        href: pda_tutorialDesign.html   
+      - text: ---- MODULE I PROTEOMICS ----
+      - text: 1. Read mapping 
+        href: sequencingTutorial1_mapping.html
+      - text: 2. Working with Count Data
+        href: sequencingTutorial2_DE.html
 
 
 right:

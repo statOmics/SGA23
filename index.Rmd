@@ -89,10 +89,14 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
   
 ## Module II: Next-generation Sequencing (Week 6-12)
   
-### 1. Introduction to sequencing technology, preprocessing and working with count data.
+### 1. Introduction to sequencing technology, QC, read mapping and count table
 
-- Lecture Introduction to Sequencing: [html](./sequencing_intro.html), [pdf](./sequencing_intro.pdf)
+- Lecture Introduction to Sequencing: [html](./sequencing_intro.html),[pdf](./sequencing_intro.pdf)
+- Tutorial: [handout](./sequencingTutorial_mapping.html), [C. elegans Example](./elegansAlignmentCountTable.html)
+
+### 2. Introduction to count data and GLMs
+
 - Lecture Working with count data and GLMs: [html](./sequencing_countData.html), [pdf](./sequencing_countData.pdf)
-
+- Tutorial: [handout](sequencingTutorial2_DE.html), [C. elegans example](./elegansDE.html)
 
 

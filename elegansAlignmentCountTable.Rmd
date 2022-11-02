@@ -55,8 +55,16 @@ For illustration purposes we will download subsampled fastq files from the cours
 
 ```{r}
 url <- "https://github.com/statOmics/SGA/archive/refs/heads/elegansFastq.zip"
-download.file(url,"elegansFastq.zip")
-unzip("elegansFastq.zip", exdir = "./")
+destFile <- "elegansFastq.zip"
+
+download.file(url, destFile)
+
+unzip(destFile, exdir = "./", overwrite = TRUE)
+
+if (file.exists(destFile)) {
+  #Delete file if it exists
+  file.remove(destFile)
+}
 ```
 
 ## Assess Read Quality 
@@ -67,7 +75,7 @@ Assess the fastq files with [fastQC](https://www.bioinformatics.babraham.ac.uk/p
 
 ### Input file for hisat aligner
 
-We will make the input file for the hisat aligner that will be called through the QuasR package. 
+We will make the input file for the hisat aligner that will be called through the QUASAR package. 
 
 ```{r}
 fastqFiles <- list.files(path = "SGA-elegansFastq",full.names = TRUE, pattern = "fastq")
@@ -84,19 +92,29 @@ We write the fileInfo to disk
 write_tsv(fileInfo,file="fastQfiles.txt")
 ```
 
-### Download C. elegans genome and gtf file 
+### Download C. elegans genome and gff3 file 
 
-![]("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceGenome.pdf")
+```{r refGenome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
+knitr::include_graphics("./images_sequencing/humanReferenceGenome.pdf")
+```
 
-![]("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceTranscriptome.pdf]
+
+```{r refTranscriptome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
+knitr::include_graphics("./images_sequencing/humanReferenceTranscriptome.pdf")
+```
 
 ```{r}
-download.file(url = "https://ftp.ensembl.org/pub/release-108/fasta/caenorhabditis_elegans/dna/Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz",
-              destfile = "Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz")
-download.file(url = "https://ftp.ensembl.org/pub/release-108/gtf/caenorhabditis_elegans/Caenorhabditis_elegans.WBcel235.108.gtf.gz",
-              destfile = "Caenorhabditis_elegans.WBcel235.108.gtf.gz")
-gunzip("Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz")
-gunzip("Caenorhabditis_elegans.WBcel235.108.gtf.gz")
+urlGenome <- "https://ftp.ensembl.org/pub/release-108/fasta/caenorhabditis_elegans/dna/Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz"
+genomeDestFile <- "Caenorhabditis_elegans.WBcel235.dna.toplevel.fa.gz"
+urlGff <- "https://ftp.ensembl.org/pub/release-108/gff3/caenorhabditis_elegans/Caenorhabditis_elegans.WBcel235.108.gff3.gz"
+gffDestFile <- "Caenorhabditis_elegans.WBcel235.108.gff3.gz"
+
+download.file(url = urlGenome ,
+              destfile = genomeDestFile)
+download.file(url = urlGff,
+              destfile = gffDestFile)
+gunzip(genomeDestFile, overwrite = TRUE, remove=TRUE)
+gunzip(gffDestFile, overwrite = TRUE, remove=TRUE)
 list.files()
 ```
 
@@ -108,12 +126,12 @@ list.files()
 
 ```{r}
 suppressPackageStartupMessages({
-library(QuasR)
-library(Rhisat2)
+    library(QuasR)
+    library(Rhisat2)
 })
 sampleFile <- "fastQfiles.txt"
 genomeFile <- "Caenorhabditis_elegans.WBcel235.dna.toplevel.fa"    
-projE <- qAlign(
+projElegans <- qAlign(
     sampleFile = sampleFile, 
     genome = genomeFile,
     splicedAlignment = TRUE, 
@@ -123,25 +141,24 @@ projE <- qAlign(
 
 ## Make count table
 
-### Convert gtf file into database
+### Convert gff file into database
 
-The gtf file contains information on the position of features, e.g. exons and genes, along the chromosome. 
+The gff3 file contains information on the position of features, e.g. exons and genes, along the chromosome. 
 
 ```{r}
 suppressPackageStartupMessages({
 library(GenomicFeatures)
 library(Rsamtools)
 })
-annotFile <- "Caenorhabditis_elegans.WBcel235.108.gtf"
+annotFile <- "Caenorhabditis_elegans.WBcel235.108.gff3"
 
-chrLen <- scanFaIndex(genomeFile)
+#chrLen <- scanFaIndex(genomeFile)
 
-chrominfo <- data.frame(chrom = as.character(seqnames(chrLen)),
-                        length = width(chrLen),
-                        is_circular = rep(FALSE, length(chrLen)))
+#chrominfo <- data.frame(chrom = as.character(seqnames(chrLen)),
+#                        length = width(chrLen),
+#                        is_circular = rep(FALSE, length(chrLen)))
 
-txdb <- makeTxDbFromGFF(file = annotFile, format = "gtf",
-                        chrominfo = chrominfo,
+txdb <- makeTxDbFromGFF(file = annotFile,
                         dataSource = "Ensembl",
                         organism = "Caenorhabditis elegans")
 ```
@@ -151,21 +168,11 @@ txdb <- makeTxDbFromGFF(file = annotFile, format = "gtf",
 With the qCount function we can count the overlap between the aligned reads and the genomic features of interest. 
 
 ```{r}
-geneCounts <- qCount(projE, txdb, reportLevel = "gene")
+geneCounts <- qCount(projElegans, txdb, reportLevel = "gene")
 head(geneCounts)
 ```
 
-Note, that 
-
-- The first column is the size of the gene. 
-
-- The remaining columns are the count for each fastq files.
-
-- The column names of the count columns are the names of the SRA files, which can be used to link them to the experiment.  
-
-
-
-### Save count table for future use. 
+Save count table for future use. 
 
 ```{r}
 write.csv(as.data.frame(geneCounts),file = "elegansCountTable.csv")

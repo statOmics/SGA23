@@ -92,12 +92,12 @@ write_tsv(fileInfo,file="fastQfiles.txt")
 ### Download C. elegans genome and gff3 file 
 
 ```{r refGenome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
-knitr::include_graphics("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceGenome.pdf")
+knitr::include_graphics("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceGenome_fig.png")
 ```
 
 
 ```{r refTranscriptome, echo=FALSE, fig.cap="slide courtesy Charlotte Soneson", out.width='100%'}
-knitr::include_graphics("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceTranscriptome.pdf")
+knitr::include_graphics("https://raw.githubusercontent.com/statOmics/SGA/master/images_sequencing/humanReferenceTranscriptome_fig.png")
 ```
 
 ```{r}

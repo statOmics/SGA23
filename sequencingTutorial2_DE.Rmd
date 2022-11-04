@@ -40,3 +40,14 @@ We will use the count table that was provided after mapping all the reads with t
 1. Retreive the meta data to link the samples to the design 
 2. Perform the DE analysis with edgeR
 3. Perform the DE analysis using the DESeq2 package see [DESeq2 vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+
+### 3. Parathyroid example 
+
+The data were presented in the article "Evidence of a Functional Estrogen Receptor in Parathyroid Adenomas" by Haglund F, Ma R, Huss M, Sulaiman L, Lu M, Nilsson IL, Hoog A, Juhlin CC, Hartman J, Larsson C, J Clin Endocrinol Metab. jc.2012-2484, Epub 2012 Sep 28, PMID: 23024189. The sequencing was performed on tumor cultures from 4 patients at 2 time points over 3 conditions (DPN, OHT and control). One control sample was omitted by the paper authors due to low quality. The package vignette describes the creation of objects from raw sequencing data provided by NCBI Gene Expression Omnibus under accession number GSE37211. The gene and exon features are the GRCh37 Ensembl annotations, release 66.
+
+The data can be loaded by `data("parathyroidGenesSE", package="parathyroidSE")`
+
+1. Summarize technical repeats
+2. Preprocess the data
+3. Model the data using edgeR and DESeq2 
+4. Perform statistical tests to assess the effect of the stimuli at the early timepoint, the late timepoint and if the effect of the stimulus changes over time. 

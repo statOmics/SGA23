@@ -38,4 +38,5 @@ Here, we will not use our count table because it is based on a small subset of t
 We will use the count table that was provided after mapping all the reads with the read mapper `STAR`. The count table can be imported in R via the following link: [https://raw.githubusercontent.com/statOmics/SGA/airwaySeqData/star/airwayCountTableStar.csv](https://raw.githubusercontent.com/statOmics/SGA/airwaySeqData/star/airwayCountTableStar.csv)
 
 1. Retreive the meta data to link the samples to the design 
-2. Perform the DE analysis
+2. Perform the DE analysis with edgeR
+3. Perform the DE analysis using the DESeq2 package see [DESeq2 vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)

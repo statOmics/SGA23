@@ -193,6 +193,31 @@
       "Hash": "dcd1743af4336156873e3ce3c950b8b9",
       "Requirements": []
     },
+    "DESeq2": {
+      "Package": "DESeq2",
+      "Version": "1.36.0",
+      "Source": "Bioconductor",
+      "git_url": "https://git.bioconductor.org/packages/DESeq2",
+      "git_branch": "RELEASE_3_15",
+      "git_last_commit": "2800b78",
+      "git_last_commit_date": "2022-04-26",
+      "Hash": "86ab1f2e3a303a1e0cebf0ef979d53bf",
+      "Requirements": [
+        "Biobase",
+        "BiocGenerics",
+        "BiocParallel",
+        "GenomicRanges",
+        "IRanges",
+        "Rcpp",
+        "RcppArmadillo",
+        "S4Vectors",
+        "SummarizedExperiment",
+        "genefilter",
+        "geneplotter",
+        "ggplot2",
+        "locfit"
+      ]
+    },
     "DT": {
       "Package": "DT",
       "Version": "0.23",
@@ -655,6 +680,16 @@
       "Hash": "32e79b908fda56ee57fe518a8d37b864",
       "Requirements": []
     },
+    "RcppArmadillo": {
+      "Package": "RcppArmadillo",
+      "Version": "0.11.2.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "796805fe55a25e42b5e0aeefacc041dc",
+      "Requirements": [
+        "Rcpp"
+      ]
+    },
     "RcppEigen": {
       "Package": "RcppEigen",
       "Version": "0.3.3.9.2",
@@ -918,6 +953,25 @@
       "Repository": "CRAN",
       "Hash": "4f57884290cc75ab22f4af9e9d4ca862",
       "Requirements": []
+    },
+    "annotate": {
+      "Package": "annotate",
+      "Version": "1.74.0",
+      "Source": "Bioconductor",
+      "git_url": "https://git.bioconductor.org/packages/annotate",
+      "git_branch": "RELEASE_3_15",
+      "git_last_commit": "200c717",
+      "git_last_commit_date": "2022-04-26",
+      "Hash": "c0860969b53c340fbb7aec0c63cd99f8",
+      "Requirements": [
+        "AnnotationDbi",
+        "Biobase",
+        "BiocGenerics",
+        "DBI",
+        "XML",
+        "httr",
+        "xtable"
+      ]
     },
     "askpass": {
       "Package": "askpass",
@@ -1533,6 +1587,41 @@
         "rlang",
         "rstudioapi",
         "withr"
+      ]
+    },
+    "genefilter": {
+      "Package": "genefilter",
+      "Version": "1.78.0",
+      "Source": "Bioconductor",
+      "git_url": "https://git.bioconductor.org/packages/genefilter",
+      "git_branch": "RELEASE_3_15",
+      "git_last_commit": "2f57438",
+      "git_last_commit_date": "2022-04-26",
+      "Hash": "e9e2e24e99d1d61da12d57a86ab2e2a2",
+      "Requirements": [
+        "AnnotationDbi",
+        "Biobase",
+        "BiocGenerics",
+        "annotate",
+        "survival"
+      ]
+    },
+    "geneplotter": {
+      "Package": "geneplotter",
+      "Version": "1.74.0",
+      "Source": "Bioconductor",
+      "git_url": "https://git.bioconductor.org/packages/geneplotter",
+      "git_branch": "RELEASE_3_15",
+      "git_last_commit": "ca81956",
+      "git_last_commit_date": "2022-04-26",
+      "Hash": "89e2bc47cd7229f1db440004d9cfa1ea",
+      "Requirements": [
+        "AnnotationDbi",
+        "Biobase",
+        "BiocGenerics",
+        "RColorBrewer",
+        "annotate",
+        "lattice"
       ]
     },
     "generics": {
@@ -2390,6 +2479,16 @@
       "Repository": "CRAN",
       "Hash": "95ef9167b75dde9d2ccc3c7528393e7e",
       "Requirements": []
+    },
+    "printr": {
+      "Package": "printr",
+      "Version": "0.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "945cdaf4788a4132c9eb625d62f958cc",
+      "Requirements": [
+        "knitr"
+      ]
     },
     "processx": {
       "Package": "processx",

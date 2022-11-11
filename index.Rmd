@@ -99,4 +99,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 - Lecture Working with count data and GLMs: [html](./sequencing_countData.html), [pdf](./sequencing_countData.pdf)
 - Tutorial: [handout](sequencingTutorial2_DE.html), [C. elegans example](./elegansDE.html)
 
+### 3. Technical details on RNA-seq DE analysis
+
+- Lecture: [html](./sequencing_technicalDE.html), [pdf](./sequencing_technicalDE.pdf)
 

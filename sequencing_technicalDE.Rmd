@@ -11,6 +11,11 @@ output:
     number_sections: true
     latex_engine: xelatex
 always_allow_html: true
+linkcolor: blue
+urlcolor: blue 
+citecolor: blue
+link-citations: yes
+
 ---
 
 ```{r functions, include=FALSE}
@@ -701,7 +706,7 @@ Thus we need many data points in order for the theory to hold in practice. In or
 
  - In bulk RNA-seq, we are often working with a limited number of samples and so we typically do not expect asymptotic theory to hold yet. In single-cell RNA-seq, we often perform several preprocessing steps before calculating $p$-values for each gene and so we may be 'using the data multiple times'. Rather than attaching strong probabilistic interpretations to the $p$-values, we therefore advice to view the $p$-values simply as useful numerical summaries for ranking the genes for further inspection in genomics applications.
  
-```{r echo=FALSE}
+```{r echo=FALSE, fig.width=0.5, fig.caption="Difference between Wald and LRT test",fig.align='center'}
 include_graphics("./images_sequencing/likTests.png")
 ```
  
@@ -815,7 +820,7 @@ table(keep)
 
 Independent filtering has been formalized by [Bourgon *et al.* (2010)](https://www.pnas.org/content/107/21/9546).
 
-```{r, echo=FALSE, fig.cap=paste("Figure 1 from Bourgon *et al.* (2010).")}
+```{r, echo=FALSE, fig.cap=paste("Figure 1 from Bourgon *et al.* (2010)."), fig.width=0.99}
 # All defaults
 include_graphics("./images_sequencing/independentFiltering.png")
 ```
@@ -829,7 +834,7 @@ The concept of independent filtering can be summarized as follows:
  - We want to control the type I error rate of the second stage (testing). But note that **the second stage is conditional on the first stage**, as we only test features passing the filter, and basically ignore the fact that filtering was performed. Indeed, one criticism is that computing and correcting the $p$-values as if filtering had not been performed may lead to overoptimistic adjusted $p$-values.
  - [Bourgon *et al.* (2010)](https://www.pnas.org/content/107/21/9546) show that filtering is only appropriate (i.e., does not inflate type I error rate) if the conditional null distribution of test statistics for features passing the filter is the same as the unconditional null distribution. Therefore, **filtering is appropriate if the statistic used for filtering is independent of the statistic used for testing under the null hypothesis**.
  
-```{r, echo=FALSE, fig.cap=paste("Figure 2 from Bourgon *et al.* (2010).")}
+```{r, echo=FALSE, fig.cap=paste("Figure 2 from Bourgon *et al.* (2010)."), fig.width=0.99,fig.align='center'}
 # All defaults
 include_graphics("./images_sequencing/independentFiltering2.png")
 ```
@@ -1017,7 +1022,9 @@ $$
   
 ## TMM method (default of `edgeR`)
 
-```{r caption=" Robinson and Oshlack (2010). Genome Biology."}
+[Robinson and Oshlack (2010). Genome Biology](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25)
+
+```{r fig.width=0.5, fig.align='center', fig.cap==" Robinson and Oshlack (2010). Genome Biology."}
 knitr::include_graphics("./figs/edgeRNormIntro.png")
 ```
 

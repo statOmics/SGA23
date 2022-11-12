@@ -10,6 +10,7 @@ output:
     toc: true
     number_sections: true
     latex_engine: xelatex
+always_allow_html: true
 ---
 
 ```{r functions, include=FALSE}
@@ -105,7 +106,7 @@ p1
 ```
 
 
-## Exponential family
+## Exponential Family
 
 $$
 f(y_i\vert \theta_i,\phi)=\exp\left\{ \frac{y_i\theta_i- b(\theta_i)}{a(\phi)}+c(y_i,\phi)\right\}
@@ -118,13 +119,14 @@ with
 - $a(.)$, $b(.)$, $c(.)$: specific functions that depend on the distribution, 
 
 e.g. for normal distribution 
+
 - $\phi=\sigma^2$, 
 - $\theta=\mu$, 
 - $a(\phi)=\phi=\sigma^2$, 
 - $b(\theta_i)=\theta_i^2/2$, 
 - $c(y_i,\phi)=-\frac{1}{2}[y^2/\phi+\log(2\pi\phi)]$
 
-### Poisson distribution
+### Poisson Distribution
 
 $$
 y_i \sim \frac{\mu_i^{y_i}e^{-\mu_i}}{y_i!}
@@ -136,7 +138,8 @@ $$
 y_i \sim \exp\left\{y_i\log(\mu_i) - \mu_i - \log(y_i!)\right\}
 $$
 
-## Components of Generalized Linear Model}
+## Components of Generalized Linear Model
+
 $$
 \left\{\begin{array}{ccc}
 y_i\vert x_i&\sim&f(y_i\vert{\theta}_i,\phi)\\\\
@@ -146,7 +149,7 @@ g(\mu_i)&=&\eta(\mathbf{x}_i)\\\\
 \end{array}\right.,
 $$
 with $g(.)$ the link function, e.g. 
-\begin{itemize}
+
 - $g(.)=.$ : identity link for Normal distribution
 - $g(.)=\log(.)$ : canonical link for Poisson distribution
 - $g(.)=\text{logit}(.)=\log\left[\frac{(.)}{(1-.)}\right]$ : canonical link for Bernouilli distribution.
@@ -160,7 +163,7 @@ E[y_i]&=&\mu_i\\
 \eta_i&=&\mathbf{x}_i\boldsymbol{\beta}
 \end{array}\right.$$
 
-## The likelihood
+## Likelihood
 
 We start from a sample, and consider it as fixed and known. 
 
@@ -181,12 +184,13 @@ $$\prod\limits_{i=1}^n f(y_i,\theta_i,\phi)$$
 $$
 L(\boldsymbol{\theta},\phi\vert \boldsymbol{y})=\prod\limits_{i=1}^n f(y_i,\theta_i,\phi)
 $$
+
 - The log-likelihood function is often used, which is defined as
 $$
 l(\boldsymbol{\theta},\phi\vert \boldsymbol{y}) = \log L(\boldsymbol{\theta},\phi\vert \boldsymbol{y}) =  \sum\limits_{i=1}^n \log  f(y_i,\theta_i,\phi)
 $$
  
-### Poisson example 
+### Poisson Example 
 
 The log-likelihood for our simulated dataset given the real model parameters is: 
 
@@ -219,7 +223,7 @@ dpois(y,lambda = muTrue, log = TRUE) %>%
   sum()
 ```
 
-### Properties of the log-likelihood
+### Properties of the Log-Likelihood
 
 $$
 l(\theta_i,\phi\vert y_i)=\left\{ \frac{y_i\theta_i- b(\theta_i)}{a(\phi)}+c(y_i,\phi)\right\}
@@ -233,7 +237,7 @@ Note that,
 - Variance $\text{var}[y_i]$ depends on mean! 
 - Often there is no dispersion parameter e.g. Bernouilli: $\text{var}[y_i]=\mu_i(1-\mu_i)$, 
 
-### Poisson example 
+### Poisson Example 
 
 - Canonical model parameter $\theta_i=\log{\mu_i}$.
 - $b(\theta_i) = \exp(\theta_i)$
@@ -287,21 +291,22 @@ S(\boldsymbol{\beta})&=&\frac{\partial  \sum\limits_{i=1}^n \left\{ \frac{y_i \t
 
 - $\boldsymbol{A}$ is a diagonal matrix: $a_{ii}=\left(\text{var}[y_i]\frac{\partial \eta_i}{\partial \mu_i}\right)^{-1}$, $\boldsymbol{y}=[y_1,\ldots, y_n]^T$, $\boldsymbol{\mu}=[\mu_1,\ldots,\mu_n]^T$ 
 
-#### Poisson example 
+#### Poisson Example 
 
 
 For poisson data: $a(\phi)b^{\prime\prime}(\theta)=\mu$ and $\frac{\partial \mu}{\partial \eta}=\mu$. So $\mathbf{A}=\mathbf{I}$ and
 
 $$ S(\beta)=\mathbf{X}^T \left\{\mathbf{Y}-\boldsymbol{\mu}\right\}$$
 
-### Solve Score equations
+### Solve Score Equations
 
 Find  parameter estimator  $\hat{\boldsymbol{\beta}}$ so that
 $$ S(\boldsymbol{\beta}) = \mathbf{0}$$
 $$\mathbf{X}^T\mathbf{A}\left(\mathbf{y}-\boldsymbol{\mu}\right) =\mathbf{0}$$
 Problem! Non linear in $\beta$ due to 
+
 - link function: $\boldsymbol{\mu}=h^{-1}(\eta)$ 
-- a_{ii}=\left(\text{var}[y_i]\frac{\partial \eta_i}{\partial \mu_i}\right)^{-1} 
+- $a_{ii}=\left(\text{var}[y_i]\frac{\partial \eta_i}{\partial \mu_i}\right)^{-1}$
 
 $\rightarrow$ Find roots of score equation by using Newton-Raphson method.
 
@@ -352,7 +357,7 @@ Newton Raphson algorithm to find the root of the score function.
 6. Iterate from step 2 - 5 until convergence.
 
 
-#### Derivative of the score function 
+#### Derivative of Score 
 
 We have to implement an interative algorithm for optimisation. To make things tractable we will act as if $\mathbf{A}$ is known and fix it using the current values of $\boldsymbol{\beta}^k$. Note, that for Poisson regression $\mathbf{A}=\mathbf{I}$.
 
@@ -367,10 +372,11 @@ We have to implement an interative algorithm for optimisation. To make things tr
 &=&-\mathbf{X}^T\mathbf{WX}
 \end{eqnarray*}
 
-#### Define line (plane) of derivative
-- We know two points of the plane $(\boldsymbol{\beta}^k,S(\boldsymbol{\beta}^k))$ and $(\boldsymbol{\beta}^{k+1},0)$
+#### Define equation of Tangent Line (Plane)
+
+- We know two points of the tangent plane $(\boldsymbol{\beta}^k,S(\boldsymbol{\beta}^k))$ and $(\boldsymbol{\beta}^{k+1},0)$
 - We know the direction of the plane $S^\prime(\boldsymbol{\beta})=\frac{\partial S(\boldsymbol{\beta})}{\partial \boldsymbol{\beta}}$
-- Equation of plane:
+- Equation of Plane:
 $$S(\boldsymbol{\beta})={\alpha}_0+S^\prime\vert_{\boldsymbol{\beta}^k} \boldsymbol{\beta}$$
 
 - Get $\boldsymbol{\beta}_{k+1}$
@@ -428,9 +434,10 @@ For Poisson data
 - $\mathbf{W}=\mathbf{A}\frac{\partial{\mu}}{{\partial \eta}}$ is a diagonal matrix with $[\frac{\partial{\mu_i}}{{\partial \eta_i}}]_{ii}=[\mu_i]_{ii}=[\exp(\eta_i)]_{ii}$ on its diagonal elements.
 
 
-### Variance-covariance matrix of the model parameters?
+### Variance-Covariance Matrix of Mean Model Parameters?
 
 In the IRWLS algorithm, the data is weighted according to the variance of $\mathbf{Y}$. We correct for the fact that the data are heteroscedastic.
+
 Count data have a mean variance relation (e.g. in Poisson case $\text{E}\left[Y \right]=\text{var}\left[Y \right]=\mu$).
 The IRWLS also corrects for the scale parameter $\phi$ in $\mathbf{W}$. (Note that the scale parameter for Poisson is $\phi=1$).
 
@@ -441,10 +448,11 @@ Note, that the Fisher Information Matrix equals the inverse of the variance-cova
 The larger the Fisher Information Matrix the more information we have on the experiment to estimate the model parameters.
 FIM $\uparrow$, precision $\uparrow$, $\text{SE}\downarrow$
 
-## Application to Poisson example 
+## Poisson Example 
 
 
-### Initial estimate
+### Initial Estimate
+
 This is a very poor initial estimate used to illustrate the algorithm.
 Otherwise convergence for this simple example is way too quick
 
@@ -462,16 +470,20 @@ plot(betasTrue,
 lines(betas,type="b",lty=2 )
 ```
 
-### Iteratively reweighted least squares
-#### Pseudo data
+### Iteratively Reweighted Least Squares
+
+#### Pseudo Data
+
 $$z_i= \eta_i + \frac{\partial \eta_i}{\partial \mu_i}(y_i -\mu_i)$$
 $$z_i= \eta_i + e^{-\eta_i} y_i -1$$
 
-#### Weight matrix?
+#### Weight Matrix?
+
 $$[w_{ii}]= var_{y_i}^{-1} \left(\frac{\partial \mu}{\partial \eta}\right)^2$$
 $$[w_{ii}]= e^{\eta_i}$$
 
-#### Run this update step multiple times
+#### Run Update Step Multiple Times
+
 First 3 times (colors are black 0, red iteration 1, green iteration 2, blue iteration 3)
 
 ```{r}
@@ -505,8 +517,9 @@ cat("\nlikelihood current fit=", round(sum(dpois(y,exp(xhlp%*%betas),log=TRUE)),
 ```
 
 
-## Comparison with glm function
-### Smarter initialisation
+## Comparison with GLM Function
+
+### Smarter Initialisation
 ```{r}
 z<-log(y+.5)
 betas<-lm(z~-1+xhlp)$coef
@@ -547,7 +560,8 @@ devianceOld<-1e30
 ```
 
 
-### Run this update step multiple times until convergence
+### Run Update Step until Convergence
+
 ```{r}
 plot(betasTrue,ylab=expression(beta),ylim=c(0,4),pch=19,type="b")
 lines(betas,type="b",lty=2)
@@ -578,13 +592,15 @@ cat("iteration",iteration,"Deviance Old",devianceOld,"Deviance", deviance,"\n")
 ```
 
 ### Variance $\beta$?
+
 $$\Sigma_{\beta}=\left(\mathbf{X}^T\mathbf{W} \mathbf{X}\right)^{-1}$$
 
 ```{r}
 varBeta=solve(t(xhlp)%*%diag(w)%*%xhlp)
 ```
 
-#### Fit GLM
+### Comparison with GLM fit
+
 Use -1 because intercept is already in xhlp
 ```{r}
 glmfit=glm(y~-1+xhlp,family=poisson)
@@ -703,7 +719,7 @@ knitr::include_graphics("./figs/McCarthySmyth2012.png")
 knitr::include_graphics("./figs/McCarthySmyth2012_testing.png")
 ```
 
-# Edger - quasi-likelihood
+# EdgeR - Quasi-Likelihood
 
 [Lund et al. 2012](https://www.degruyter.com/document/doi/10.1515/1544-6115.1826/html)
 
@@ -763,7 +779,7 @@ knitr::include_graphics("./figs/limmaVoomPaperFig2.png")
 
 
 
-# Independent filtering
+# Independent Filtering
 
 Independent filtering is a strategy to remove features (in this case, genes) prior to the analysis. Removal of these features may lower the multiple testing correction for other genes that pass the filter. We try to remove genes that have a low power to be found statistically significant, and/or that are biologically less relevant. 
 A common filtering strategy is to remove genes with a generally low expression, as low counts have lower relative uncertainty (hence lower statistical power), and may be considered biologically less relevant.
@@ -829,7 +845,7 @@ simCounts <- counts(dds)
 group <- dds$condition
 ```
 
-## A dependent test statistic
+## A Dependent Test Statistic
 
 ```{r}
 filterStatEffectSize <- abs(rowMeans(simCounts[,group == "A"]) - rowMeans(simCounts[,group == "B"]))
@@ -851,7 +867,7 @@ plot(density(testStat$statistic[keepEffectSize], na.rm=TRUE),
 ```
 
 
-## An independent test statistic
+## An Independent Test Statistic
 
 ```{r}
 filterStatGlobalMean <- rowMeans(simCounts)
@@ -1048,7 +1064,7 @@ do.call("grid.arrange",c(plots,ncol=3))
 ```
 
 
-## Median-of-ratios method (default of `DESeq2`)
+## Median-of-Ratios Method (default of `DESeq2`)
 
 The median-of-ratios method is used in `DESeq2` as described in [Love *et al.* (2014)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8).
 It assumes that the expected value $\mu_{gi} = E(Y_{gi})$ is proportional to the true expression of the gene, $q_{gi}$, scaled by a normalization factor $s_{i}$ for each sample,
@@ -1075,7 +1091,7 @@ sizeFactors(dds)
 
 You may also want to check out the [StatQuest video on DESeq2 normalization](https://www.youtube.com/watch?v=UFB993xufUU).
 
-### Comparing TMM with DESeq2 normalization
+### Comparing TMM with DESeq2 Normalization
 
 We can compare the size factors for both normalizations to verify if they agree on the normalization factors. Note we need to scale the effective library sizes from `edgeR` to enforce a similar scale as the size factors from `DESeq2`. While below we are using an arithmetic mean, a geometric mean may be used as well, which will be more robust to outlying effective library sizes.
 

@@ -103,3 +103,6 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 - Lecture: [html](./sequencing_technicalDE.html), [pdf](./sequencing_technicalDE.pdf)
 
+### 4. Solutions
+
+- Parathyroid Example: [html](./parathyroid.html), [pdf](./parathyroid.pdf)

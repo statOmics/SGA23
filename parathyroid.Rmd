@@ -21,12 +21,16 @@ citecolor: blue
 
 
 ```{r,echo=FALSE}
+suppressPackageStartupMessages({
 library(edgeR)
 library(SummarizedExperiment)
 library(tidyverse)
+  if(!"parathyroidSE" %in% installed.packages()[,1]) BiocManager::install("parathyroidSE")
+})
+
 ```
 
-#Introduction
+# Introduction
 
 Paired-end sequencing was performed on primary cultures from parathyroid tumors of 4 patients at 2 time points over 3 conditions (control, treatment with diarylpropionitrile (DPN) and treatment with 4-hydroxytamoxifen (OHT)). DPN is a selective estrogen receptor agonist and OHT is a selective estrogen receptor modulator. One sample (patient 4, 24 hours, control) was omitted by the paper authors due to low quality. Data, the count table and information on the experiment is available at http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37211.
 

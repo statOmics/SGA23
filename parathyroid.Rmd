@@ -26,6 +26,7 @@ library(edgeR)
 library(SummarizedExperiment)
 library(tidyverse)
   if(!"parathyroidSE" %in% installed.packages()[,1]) BiocManager::install("parathyroidSE")
+  if(!"statmod" %in% installed.packages()[,1]) BiocManager::install("statmod")
 })
 
 ```

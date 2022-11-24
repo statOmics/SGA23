@@ -26,7 +26,6 @@ library(edgeR)
 library(SummarizedExperiment)
 library(tidyverse)
   if(!"parathyroidSE" %in% installed.packages()[,1]) BiocManager::install("parathyroidSE")
-  if(!"statmod" %in% installed.packages()[,1]) BiocManager::install("statmod")
 })
 
 ```
@@ -172,7 +171,7 @@ $$
 
 
 ```{r}
-dge <- estimateDisp(dge, design, robust=TRUE)  
+dge <- estimateDisp(dge, design)  
 plotBCV(dge)
 ```
 

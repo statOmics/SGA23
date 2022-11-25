@@ -243,7 +243,7 @@ We also did not find significant interactions.
 ## Volcano plots 
 
 ```{r}
-for (i in 1:nrow(L))
+for (i in 1:ncol(L))
 {
    volcano<- ggplot(topTablesF[[i]]$table,aes(x=logFC,y=-log10(PValue),color=FDR < 0.05)) + geom_point() + scale_color_manual(values=c("black","red")) + ggtitle(paste("contrast",names(topTablesF)[i]))
 print(volcano)
@@ -259,7 +259,7 @@ histsP <- lapply(topTablesF, function(x)
         geom_histogram(breaks =seq(0,1,.1) ,col=1)
     )
     
-for (i in 1:nrow(L)) 
+for (i in 1:ncol(L)) 
     histsP[[i]] <- histsP[[i]] +
     ggtitle(paste("contrast",names(topTablesF)[i]))
 histsP

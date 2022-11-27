@@ -908,14 +908,7 @@ plotTSNE(sce)
 ```{r}
   if(!"uwot" %in% installed.packages()[,1]) BiocManager::install("uwot")
 sce <- runUMAP(sce, dimred = 'PCA', external_neighbors=TRUE)
-plotUMAP(sce,)
-```
-
-<br/>
-
-```{r}
-filtered <- runTSNE(filtered, dimred="GLMPCA")
-plotTSNE(filtered)
+plotUMAP(sce)
 ```
 
 <br/><br/>

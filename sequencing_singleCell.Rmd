@@ -80,7 +80,7 @@ g <- gridExtra::grid.arrange(
 
 ## Exciting applications 
 
-```{r applications, out.width="100%", fig.cap="Hwang et al. 2018, doi: 10.1038/s12276-018-0071-8", echo=FALSE}
+```{r applications, out.width="100%", fig.cap="Hwang et al. 2018, doi: 10.1038/s12276-018-0071-8", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/Applications-of-scRNA.png")
 ```
 <br/><br/>
@@ -104,20 +104,20 @@ This difference in wetlab protocol will have a significant impact on the statist
 
 ### Variability in data
 
-```{r bulkVsSc2, fig.cap="Image credit: Davide Risso", echo=FALSE}
+```{r bulkVsSc2, fig.cap="Image credit: Davide Risso", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/increaseVariabilityRisso.png")
 ```
 <br/><br/>
 
 ## scRNA-seq Protocols
 
-```{r protocols, fig.cap="Griffiths et al., 2018, doi.org/10.15252/msb.20178046", echo=FALSE}
+```{r protocols, fig.cap="Griffiths et al., 2018, doi.org/10.15252/msb.20178046", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/scRNA-seqTechnologies.png")
 ```
 
 <br/><br/>
 
-```{r umi2, fig.cap="Image credit: Davide Risso", echo=FALSE}
+```{r umi2, fig.cap="Image credit: Davide Risso", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/umiVsFullLenghtRisso.png")
 ```
 
@@ -134,7 +134,7 @@ Both protocols suffer from a low ‘capture frequency’, i.e., the number of mo
 
 ## Multiplexing 
 
-```{r kangMultiplex, fig.cap="Kang et al. 2018, doi: 10.1038/nbt.4042", echo=FALSE}
+```{r kangMultiplex, fig.cap="Kang et al. 2018, doi: 10.1038/nbt.4042", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/kangMultiplexing.png")
 ```
 
@@ -179,7 +179,7 @@ plotReducedDim(sce, dimred="TSNE", colour_by="stim")
 
 See [OSCA book](https://github.com/OSCA-source/OSCA)
 
-```{r oscaworkflow, fig.cap="Image credit: OSCA book", echo=FALSE}
+```{r oscaworkflow, fig.cap="Image credit: OSCA book", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/scRNA-data-workflow.png")
 ```
 
@@ -211,7 +211,7 @@ Additional challenges arise as compared to bulk RNA-seq.
 
 ## Single cell experiment class 
 
-```{r singleCellExperiment, fig.cap="Image credit: OSCA book", echo=FALSE}
+```{r singleCellExperiment, fig.cap="Image credit: OSCA book", echo=FALSE, out.width="100%"}
 include_graphics("./images_sequencing/SingleCellExperiment.png")
 ```
 
@@ -486,7 +486,7 @@ Doublet cell clusters may be mistaken for intermediate/transitory states.
 ### Methods
 
 
-```{r scDbiFinder, fig.cap="Germain et al. 2021, doi: 10.12688/f1000research.73600.2"}
+```{r scDbiFinder, fig.cap="Germain et al. 2021, doi: 10.12688/f1000research.73600.2", out.width="100%"}
 knitr::include_graphics("./images_sequencing/scDblFinder.png")
 ```
 
@@ -548,7 +548,7 @@ As in bulk RNA-seq, the most commonly used methods are scaling normalizations, w
 
 - Scaling the data and log-transforming the data is not a good option.  Use offsets! 
 
-```{r glmPCAFig2, fig.cap="Townes et al. 2019, DOI: 10.1186/s13059-019-1861-6"}
+```{r glmPCAFig2, fig.cap="Townes et al. 2019, DOI: 10.1186/s13059-019-1861-6", out.width="100%"}
 knitr::include_graphics("./images_sequencing/glmPCAFig2.png")
 ```
 
@@ -564,7 +564,7 @@ $E[y_{gi}] = \mu_{gi} =  \pi_{gi} s_iN_i$
 In the edgeR model, $s_iN_i$ is referred to as the ‘effective library size’, which is used as 
 	offset in the GLM, thereby effectively focussing the statistical inference on $\pi_{gi}$.
 
-```{r lunNormalisation, fig.cap="Lun et al. 2016, DOI: 10.1186/s13059-016-0947-7", echo=FALSE}
+```{r lunNormalisation, fig.cap="Lun et al. 2016, DOI: 10.1186/s13059-016-0947-7", echo=FALSE, out.width="100%"}
 knitr::include_graphics("images_sequencing/lunNormalisation.png")
 ```
 
@@ -574,7 +574,7 @@ knitr::include_graphics("images_sequencing/lunNormalisation.png")
 
 Popular, bespoke single-cell normalization methods attempt to alleviate these issues.
 
-```{r lunNormalisation2, fig.cap="Lun et al. 2016, DOI: 10.1186/s13059-016-0947-7", echo=FALSE}
+```{r lunNormalisation2, fig.cap="Lun et al. 2016, DOI: 10.1186/s13059-016-0947-7", echo=FALSE, out.width="100%"}
 knitr::include_graphics("images_sequencing/lunNormalisation2.png")
 ```
 
@@ -793,7 +793,7 @@ A generalization of PCA to exponential family distributions is provide by Townes
 PCA is based on squared/Euclidean distances (e.g.Townes et al. 2019), which has a close link to Gaussian likelihood, which is inappropriate for count data due to the mean-variance relationship. 
 Therefore, PCA results risks to be dominated by highly expressed genes, which have large variance. 
 
-```{r glmPCAFig2Rep, fig.cap="Townes et al. 2019, DOI: 10.1186/s13059-019-1861-6", echo=FALSE}
+```{r glmPCAFig2Rep, fig.cap="Townes et al. 2019, DOI: 10.1186/s13059-019-1861-6", echo=FALSE, out.width="100%"}
 knitr::include_graphics("./images_sequencing/glmPCAFig2.png")
 ```
 
@@ -978,7 +978,7 @@ The reference data used for training the classifier must be representative for t
 
 ## Zero-inflation 
 
-```{r zeroInflation1}
+```{r zeroInflation1, out.width="100%"}
 knitr::include_graphics("./images_sequencing/zeroInflation.png")
 ```
 
@@ -1065,7 +1065,7 @@ knitr::include_graphics("./images_sequencing/pseudoReplicationFalsePositives.png
 
 <br/>
 
-```{r pseudoReplicationAUC, fig.cap="Squair et al. 2021 (DOI 10.1038/s41467-021-25960-2)", echo=FALSE}
+```{r pseudoReplicationAUC, fig.cap="Squair et al. 2021 (DOI 10.1038/s41467-021-25960-2)", echo=FALSE, out.width="100%"}
 knitr::include_graphics("./images_sequencing/pseudoreplicationComparison.png")
 ```
 

@@ -764,7 +764,7 @@ Like feature selection, this remains a subjective step in the analysis. Several 
 - In PCA, each principal component is a linear combination of genes. 
 See here for a [geometric interpretation of PCA](https://statomics.github.io/HDDA/svd.html#3_Geometric_interpretation) and for a [PCA details](https://statomics.github.io/HDDA/svd.html#8_SVD_and_principal_component_analysis_(PCA))
 
--Typically, PCA is performed on log-transformed normalized counts. 
+- Typically, PCA is performed on log-transformed normalized counts. 
 The log-transformation helps somewhat, but not completely, to account for the mean-variance relationship.
 
 - PCA works well for bulk RNA-seq data. However, the structure of scRNA-seq data is often 
@@ -1068,8 +1068,13 @@ knitr::include_graphics("./images_sequencing/pseudoreplicationComparison.png")
 
 <br/><br/>
 
-## differential distributions
+## Differential Distributions
 
 - A few methods exist that compare distributions between treatments. 
 
 - But, they do not allow to interpret the difference in the distributions.
+
+
+# Acknowledgements {-}
+
+Davide Risso for sharing his materials from the CSAMA 2022 workshop, which I used as the starting point for the code chapter.

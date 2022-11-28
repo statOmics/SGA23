@@ -1077,4 +1077,4 @@ knitr::include_graphics("./images_sequencing/pseudoreplicationComparison.png")
 
 # Acknowledgements {-}
 
-Davide Risso for sharing his materials from the CSAMA 2022 workshop, which I used as the starting point for the code chapter.
+Thanks to Davide Risso for sharing his materials from the CSAMA 2022 workshop, which I used as the starting point for the R code in this document.

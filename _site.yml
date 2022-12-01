@@ -51,11 +51,13 @@ navbar:
         href: pda_tutorialPreprocessing.html
       - text: 2.3. Quantification - Design
         href: pda_tutorialDesign.html   
-      - text: ---- MODULE I PROTEOMICS ----
+      - text: ---- MODULE II RNA-seq ----
       - text: 1. Read mapping 
         href: sequencingTutorial1_mapping.html
       - text: 2. Working with Count Data
         href: sequencingTutorial2_DE.html
+      - text: 3. Single Cell RNA-seq Data Analysis
+        href: scRNA-seq-Tutorial.html
 
 
 right:

@@ -155,10 +155,11 @@ However, many cell populations remain obscure, and the plot is overcrowded.
 
 ```{r}
 # Build a shared nearest-neighbor graph from PCA space
-g <- buildSNNGraph(sce, use.dimred = 'PCA')
+#g <- buildSNNGraph(sce, use.dimred = 'PCA')
+
 # Louvain clustering on the SNN graph, and add to sce
-colData(sce)$label <- factor(igraph::cluster_louvain(g)$membership)
+#colData(sce)$label <- factor(igraph::cluster_louvain(g)$membership)
 
 # Visualization.
-plotUMAP(sce, colour_by="label")
+#plotUMAP(sce, colour_by="label")
 ```

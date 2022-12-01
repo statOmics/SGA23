@@ -110,4 +110,5 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 ### 5. Introduction to Single Cell Transcriptomics (scRNA-seq) 
 
 - Lecture Intro to scRNA-seq: [html](./sequencing_singleCell.html), [pdf](./sequencing_singleCell.pdf)
+- Tutorial on scRNA-seq: [handout](./scRNA-seq-Tutorial.html)
 

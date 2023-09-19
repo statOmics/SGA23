@@ -14,7 +14,13 @@ navbar:
         href: intro.html
       - text: 1.2 Recap linear model
         href: recapGeneralLinearModel.html
-      - text: ---- MODULE I PROTEOMICS ----
+
+    - text: "tutorials"
+      icon: fa-laptop
+      menu:
+      - text: ---- INTRODUCTION ----
+      - text: 1 Intro KPNA2
+        href: multipleRegression_KPNA2.html
  
 right:
     - icon: fab fa-github      

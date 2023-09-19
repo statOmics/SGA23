@@ -25,7 +25,7 @@ This course is oriented towards biologists and bioinformaticians with a particul
 # Prerequisites
 
 The prerequisites for the Statistical Genomics Analysis course are the successful completion of a basic course of statistics that covers topics on data exploration and descriptive statistics, statistical modeling, and inference: linear models, confidence intervals, t-tests, F-tests, anova, chi-squared test.
-The basis concepts may be revisited in the online course at https://statomics.github.io/PSLS/ (English) and in https://statomics.github.io/sbc21/ (Dutch).
+The basis concepts may be revisited in the online course at https://statomics.github.io/PSLS/ (English) and in https://statomics.github.io/sbc/ (Dutch).
 
 In addition, knowledge of programming in `R` is preferred. A primer to `R` and Data visualization in `R` can be found at:
 
@@ -58,7 +58,9 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
    - Lecture: [HTML](./recapGeneralLinearModel.html), [PDF](./recapGeneralLinearModel.pdf)
    - Tutorial KPNA2: [HTML](./multipleRegression_KPNA2.html),  [PDF](./multipleRegression_KPNA2.pdf)
    - link to a compressed figures directory: [download figures]("https://raw.githubusercontent.com/statOmics/SGA/master/figures.tar.gz")
-   
+
+<!--
+
 ## Module I: Proteomics Data Analysis (Week 1-5)
 
 ### 1. Bioinformatics for proteomics
@@ -112,3 +114,4 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 - Lecture Intro to scRNA-seq: [html](./sequencing_singleCell.html), [pdf](./sequencing_singleCell.pdf)
 - Tutorial on scRNA-seq: [handout](./scRNA-seq-Tutorial.html)
 
+-->

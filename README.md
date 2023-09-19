@@ -1,3 +1,3 @@
-# Statistical Genomics Analysis, 2021-2022
+# Statistical Genomics Analysis, 2023-2024
 
-Course website at https://statomics.github.io/SGA21/.
+Course website at https://statomics.github.io/SGA/.

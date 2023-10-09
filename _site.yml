@@ -14,7 +14,7 @@ navbar:
         href: intro.html
       - text: 1.2 Recap linear model
         href: recapGeneralLinearModel.html
-            - text: ---- MODULE I PROTEOMICS ----
+      - text: ---- MODULE I PROTEOMICS ----
       - text: 1. Proteomics Bioinformatics
         href: docs/martens_proteomics_bioinformatics.pdf
       - text: 2.1 Identification - FDR - QC

@@ -59,7 +59,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
    - Tutorial KPNA2: [HTML](./multipleRegression_KPNA2.html),  [PDF](./multipleRegression_KPNA2.pdf)
    - link to a compressed figures directory: [download figures](https://raw.githubusercontent.com/statOmics/SGA/master/figures.tar.gz)
 
-<!--
+
 
 ## Module I: Proteomics Data Analysis (Week 1-5)
 
@@ -86,6 +86,8 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
   - Lecture Differential Abundance Analysis: [html](./pda_quantification_inference.html), [pdf](./pda_quantification_inference.pdf)
   - Tutorial: [Design](pda_tutorialDesign.html)
   - Wrap-up Blocking: [html](./pda_blocking_wrapup.html), [pdf](./pda_blocking_wrapup.pdf)
+  
+<!--
   - Solution: [Heart Example](heartMainInteraction.html)
   - Technical Details: [Technical Details](technicalDetailsProteomics.html)
   

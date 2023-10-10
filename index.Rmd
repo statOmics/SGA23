@@ -80,7 +80,10 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
   - Lecture: [html](./pda_quantification_preprocessing.html), [pdf](./pda_quantification_preprocessing.pdf)
   - Tutorial: [preprocessing](./pda_tutorialPreprocessing.html)
   - Wrap-up Peptide-based Models: [html](./pda_robustSummarisation_peptideModels.html), [pdf](./pda_robustSummarisation_peptideModels.pdf)
+  
+<!--
   - Solutions: [cancer3x3](cancer3x3.html), [cancer6x6](cancer6x6.html), [cancer9x9](cancer9x9.html)
+--> 
 
 #### 2.3. Statistical Inference & Analysis of Experiments with Factorial Designs
   - Lecture Differential Abundance Analysis: [html](./pda_quantification_inference.html), [pdf](./pda_quantification_inference.pdf)

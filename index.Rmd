@@ -89,7 +89,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
   - Tutorial: [Design](pda_tutorialDesign.html)
   - Wrap-up Blocking: [html](./pda_blocking_wrapup.html), [pdf](./pda_blocking_wrapup.pdf)
   
-<!--
+
   - Solution: [Heart Example](heartMainInteraction.html)
   - Technical Details: [Technical Details](technicalDetailsProteomics.html)
   
@@ -109,6 +109,7 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 - Lecture: [html](./sequencing_technicalDE.html), [pdf](./sequencing_technicalDE.pdf)
 
+<!--
 ### 4. Solutions Bulk RNA-seq Data Analysis
 
 - Parathyroid Example: [html](./parathyroid.html), [pdf](./parathyroid.pdf)

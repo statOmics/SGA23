@@ -109,9 +109,11 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 - Lecture: [html](./sequencing_technicalDE.html), [pdf](./sequencing_technicalDE.pdf)
 
-<!--
+
 ### 4. Solutions Bulk RNA-seq Data Analysis
 
+- airway example: [html](./airway.html)
+<!--
 - Parathyroid Example: [html](./parathyroid.html), [pdf](./parathyroid.pdf)
 
 ### 5. Introduction to Single Cell Transcriptomics (scRNA-seq) 

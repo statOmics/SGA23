@@ -171,8 +171,7 @@ plotSmear(lrt, de.tags = row.names(tt$table))
 Another way of representing the results of a differential expression analysis is to construct a heatmap of the top differentially expressed genes. Here, we would expect the contrasted sample groups to cluster separately. A heatmap is a "color coded expression matrix", where the rows and columns are clustered using hierarchical clustering. Typically, it should not be applied to counts, but works better with transformed values. Here we show how it can be applied to the variance-stabilized values generated above. We choose the top 30 differentially expressed genes. There are many functions in R that can generate heatmaps, here we show the one from the pheatmap package.
 
 ```{r}
-library(pheatmap)
-pheatmap(cpm(dge,log=TRUE)[rownames(tt$table)[1:30],])
+heatmap(cpm(dge,log=TRUE)[rownames(tt$table)[1:30],])
 ```
 
 # Issues

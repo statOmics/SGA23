@@ -726,7 +726,7 @@ knitr::include_graphics("./figs/McCarthySmyth2012_testing.png")
 
 # EdgeR - Quasi-Likelihood
 
-[Lund et al. 2012](https://www.degruyter.com/document/doi/10.1515/1544-6115.1826/html)
+[Lund et al. 2012](https://publications.wehi.edu.au/documentaspdf/256.pdf)
 
 For quasi-likelihood we do not specify the full distribution, only the first two moments: the mean and variance.
 

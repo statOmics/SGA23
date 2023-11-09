@@ -2841,6 +2841,7 @@
         "digest",
         "dplyr",
         "ggplot2",
+        "locfit",
         "htmltools",
         "htmlwidgets",
         "httr",

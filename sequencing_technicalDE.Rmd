@@ -814,8 +814,18 @@ table(keep)
 ```{r}
 lib.size <- dge$samples$lib.size * dge$samples$norm.factors
 cpmMinCount <- 10/median(lib.size)*1e6
-keep <- rowSums(cpm(dge) > cpmMinCount) >= 6
+summary(group)
+minSampSize <- min(summary(group))
+minSampSize
+keep <- rowSums(cpm(dge) > cpmMinCount) >= minSampSize
 table(keep)
+```
+
+```{r}
+leverage <- solve(t(design)%*%design)%*%t(design) %>%
+  diag()
+1/leverage
+min(1/leverage)
 ```
 
 Independent filtering has been formalized by [Bourgon *et al.* (2010)](https://www.pnas.org/content/107/21/9546).

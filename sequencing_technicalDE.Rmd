@@ -822,8 +822,7 @@ table(keep)
 ```
 
 ```{r}
-leverage <- solve(t(design)%*%design)%*%t(design) %>%
-  diag()
+leverage <- design%*% solve(t(design)%*%design)%*%t(design) %>%diag()
 1/leverage
 min(1/leverage)
 ```

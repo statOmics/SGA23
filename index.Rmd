@@ -109,6 +109,10 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 
 - Lecture: [html](./sequencing_technicalDE.html), [pdf](./sequencing_technicalDE.pdf)
 
+### 4. DE analysis starting from transcript level counts
+
+- [Soneson et al. 2016](https://f1000research.com/articles/4-1521/v2)
+- Tutorial: [handout](sequencingTutorial3_DE.html)
 
 ### 4. Solutions Bulk RNA-seq Data Analysis
 

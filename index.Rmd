@@ -112,17 +112,16 @@ source("https://raw.githubusercontent.com/statOmics/SGA/master/install.R")
 ### 4. DE analysis starting from transcript level counts
 
 - [Soneson et al. 2016](https://f1000research.com/articles/4-1521/v2)
-- Tutorial: [handout](sequencingTutorial3_DE.html)
+- Tutorial: [handout](./sequencingTutorial3_DE.html)
 
-### 4. Solutions Bulk RNA-seq Data Analysis
+### 5. Solutions Bulk RNA-seq Data Analysis
 
 - airway example: [html](./airway.html)
-<!--
-- Parathyroid Example: [html](./parathyroid.html), [pdf](./parathyroid.pdf)
+- Parathyroid Example (quasi-edgeR): [html](./parathyroid.html), [pdf](./parathyroid.pdf)
 
-### 5. Introduction to Single Cell Transcriptomics (scRNA-seq) 
+
+### 6. Introduction to Single Cell Transcriptomics (scRNA-seq) 
 
 - Lecture Intro to scRNA-seq: [html](./sequencing_singleCell.html), [pdf](./sequencing_singleCell.pdf)
 - Tutorial on scRNA-seq: [handout](./scRNA-seq-Tutorial.html)
 
--->

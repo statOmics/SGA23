@@ -109,13 +109,13 @@ aturecounts object
 
 ```{r}
 suppressPackageStartupMessages({
+  if(!"tximeta" %in% installed.packages()[,1]) BiocManager::install("tximeta")
+  if(!"org.Hs.eg.db" %in% installed.packages()[,1]) BiocManager::install("org.Hs.eg.db")
   library(tximeta)
   library(org.Hs.eg.db)
   library(SummarizedExperiment)
   library(ggplot2)
   library(tidyverse)
-  library(pheatmap)
-
 })
 ```
 
@@ -226,8 +226,7 @@ library(ggplot2)
 volcano <-  ggplot(ttAll$table,aes(x=logFC,y=-log10(PValue),color=FDR<0.05)) + geom_point() + scale_color_manual(values=c("black","red"))
 volcano
 plotSmear(ftest, de.tags = row.names(tt$table))
-library(pheatmap)
-pheatmap(cpm(dge,log=TRUE)[rownames(tt$table)[1:30],])
+heatmap(cpm(dge,log=TRUE)[rownames(tt$table)[1:30],])
 ```
 
 # Transcript level analysis 
@@ -286,6 +285,5 @@ library(ggplot2)
 volcano <-  ggplot(tttAll$table,aes(x=logFC,y=-log10(PValue),color=FDR<0.05)) + geom_point() + scale_color_manual(values=c("black","red"))
 volcano
 plotSmear(ftestt, de.tags = row.names(tt$table))
-library(pheatmap)
-pheatmap(cpm(dte,log=TRUE)[rownames(ttt$table)[1:30],])
+heatmap(cpm(dte,log=TRUE)[rownames(ttt$table)[1:30],])
 ```

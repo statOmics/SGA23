@@ -1,5 +1,5 @@
 name : "SGA"
-title : "Statistical Genomics Analysis (SGA)"
+title : "Statistical Genomics Analysis 2023 (SGA23)"
 navbar:
   title: "SGA"
   left:
@@ -61,7 +61,7 @@ navbar:
  
 right:
     - icon: fab fa-github      
-      href: https://github.com/statOmics/SGA
+      href: https://github.com/statOmics/SGA23
     - text: "statOmics"
       href: http://statomics.github.io/
 output:
